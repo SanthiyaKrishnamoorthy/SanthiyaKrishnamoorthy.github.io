@@ -1,72 +1,124 @@
-/* Cascading stylesheet for the website */
-
-/* Text inside these asterisks and slashes are comments for human */
-
-  a {
-    color:blue;/* set the text color to blue here */
-    text-decoration: none; /* This means we do not want hyperlinks to be underlined */
-  }
-p
-{
-  color:blue;
+:root{
+  --bg: #ffffff;
+  --surface: #f7f7f8;
+  --text: #111827;
+  --muted: #6b7280;
+  --accent: #2b6cb0;
+  --card: #ffffff;
+  --glass: rgba(255,255,255,0.6);
+  --radius: 12px;
+  --maxWidth: 1100px;
+  --shadow: 0 6px 20px rgba(12,12,12,0.06);
 }
-  a:hover {
-    color:red;/* set the text color to red here */
-    text-decoration: none; /* This means we do not want hyperlinks to be underlined */
-  }
 
-  body {
-    /* set the background color here */
-    /* set the text color to black here */
-    /* set the font here */
-    /* set the text alignment here */
-    background-color:beige;
-    color: black;
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
+[data-theme="dark"]{
+  --bg: #0b1220;
+  --surface: #071023;
+  --text: #e6eef8;
+  --muted: #9fb3d3;
+  --accent: #60a5fa;
+  --card: #071623;
+  --glass: rgba(255,255,255,0.03);
+  --shadow: 0 8px 30px rgba(2,6,23,0.7);
+}
 
-   }
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  background:linear-gradient(180deg,var(--surface),var(--bg));
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  line-height:1.5;
+}
 
-  footer {
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
+.container{max-width:var(--maxWidth);margin:0 auto;padding:1.25rem}
 
-  h1 {
-    margin-bottom: 0.5rem;
-    margin-top: 3rem;
-   }
+/* Header */
+.site-header{
+  position:sticky;top:0;z-index:60;
+  backdrop-filter: blur(6px);
+  background: linear-gradient(180deg, rgba(255,255,255,0.6), rgba(255,255,255,0.25));
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+[data-theme="dark"] .site-header{background:linear-gradient(180deg, rgba(7,16,35,0.7), rgba(7,16,35,0.4));border-bottom:1px solid rgba(255,255,255,0.03)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;padding:0.6rem 0}
+.brand{font-weight:700;color:var(--text);text-decoration:none;font-size:1.05rem}
+.nav{display:block}
+.nav-list{list-style:none;margin:0;padding:0;display:flex;gap:1rem;align-items:center}
+.nav-list a{color:var(--muted);text-decoration:none;padding:0.4rem 0.6rem;border-radius:8px}
+.nav-list a:hover{color:var(--accent);background:var(--glass)}
 
-  h2 {
-    color: #075AAB;
-    /* set the text color of to #075AAB here */
-    /* set both the bottom margin and top margin to 2.5rem here */
-    margin-bottom: 2.5rem;
-    margin-top: 2.5rem;
-   }
+.header-controls{display:flex;gap:.5rem;align-items:center}
+.header-controls button{background:transparent;border:0;font-size:1.15rem;cursor:pointer;padding:.4rem;border-radius:8px}
+.mobile-menu-btn{display:none}
 
-  h3 {
-    margin-bottom: 0;
-    margin-top: 2rem;
-  }
+/* Hero */
+.hero{padding:3rem 0 2.5rem}
+.hero-grid{display:grid;grid-template-columns:1fr 320px;gap:1.5rem;align-items:center}
+.hero-text h1{font-size:2rem;margin:0 0 .25rem}
+.hero-text .accent{color:var(--accent)}
+.lead{font-weight:600;margin-bottom:.5rem;color:var(--muted)}
+.hero-ctas{display:flex;gap:.6rem;margin-top:1rem;flex-wrap:wrap}
+.btn{background:var(--accent);color:white;padding:.6rem .9rem;border-radius:10px;text-decoration:none;display:inline-block}
+.btn:hover{filter:brightness(.95)}
+.btn-outline{background:transparent;border:1px solid rgba(0,0,0,0.06);color:var(--text);padding:.5rem .8rem}
+.link{color:var(--accent);text-decoration:none;display:inline-block;padding:.35rem .4rem}
+.quick-contact{list-style:none;padding:0;margin:1rem 0 0;color:var(--muted);display:flex;gap:1rem;flex-wrap:wrap}
 
-  h4 {
-    margin-bottom: 1rem;
-    margin-top: 0.5rem;
-  }
+.hero-card{background:var(--card);border-radius:var(--radius);box-shadow:var(--shadow);padding:1rem;display:flex;gap:1rem;align-items:center}
+.profile-photo{width:120px;height:120px;border-radius:14px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.card-body h3{margin:0 0 .25rem}
+.card-footer{display:flex;gap:.5rem;margin-top:.6rem}
 
-  h5 {
-    margin-top: 0.5rem;
-  }
+/* Sections */
+.section{padding:2.25rem 0}
+.section.alt{background:linear-gradient(180deg, rgba(0,0,0,0.02), transparent)}
+h2{margin:0 0 1rem;font-size:1.25rem}
+.muted{color:var(--muted)}
 
-  hr {
-    margin-bottom: 3rem;
-    margin-top: 3rem;
-  }
+/* Grids */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:1.25rem}
+.skills-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem}
+.skill-card{background:var(--card);padding:1rem;border-radius:10px;box-shadow:var(--shadow)}
+.projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+.project{background:var(--card);padding:1rem;border-radius:10px;box-shadow:var(--shadow)}
+.project .meta{color:var(--muted);font-size:.95rem;margin-top:.6rem}
+.project-link{display:inline-block;margin-top:.6rem;color:var(--accent);text-decoration:none}
 
-  /* this controls how the bullet points in the resume page looks */
-  ul {
-    display: table;
-    margin: 0 auto;
-    text-align: left;
-  }
+.certs-area{display:flex;gap:1rem;align-items:flex-start;flex-wrap:wrap}
+.certs-area ul{min-width:240px;padding-left:1.1rem}
+.cert-actions{display:flex;gap:.5rem;flex-wrap:wrap}
+
+/* Education */
+.edu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+.edu-card{background:var(--card);padding:1rem;border-radius:10px;box-shadow:var(--shadow)}
+
+/* Contact */
+.contact-grid{display:grid;grid-template-columns:1fr 380px;gap:1rem}
+.contact-form label{display:block;margin-bottom:.6rem}
+.contact-form input, .contact-form textarea{
+  width:100%;padding:.6rem;border-radius:8px;border:1px solid rgba(0,0,0,0.08);background:transparent;color:var(--text)
+}
+.form-actions{display:flex;gap:.6rem;margin-top:.5rem}
+.muted.note{font-size:.9rem}
+
+/* Footer */
+.site-footer{padding:1rem 0;border-top:1px solid rgba(0,0,0,0.04);text-align:center;color:var(--muted)}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr}
+  .contact-grid{grid-template-columns:1fr}
+  .two-col{grid-template-columns:1fr}
+  .nav{display:none}
+  .mobile-menu-btn{display:inline-block}
+}
+
+@media (max-width:480px){
+  .header-inner{padding:0.4rem 0}
+  .hero{padding:2rem 0}
+  .hero-text h1{font-size:1.5rem}
+}
