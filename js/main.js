@@ -1,131 +1,163 @@
-// Basic interactive behavior: theme, mobile nav, smooth scroll, edit certs, contact form stub
+/* =========================================================
+   SANTHIYA K — PORTFOLIO  |  main.js
+   Features: Theme toggle, typing animation, AOS scroll,
+             project filtering, mobile nav, contact form
+   ========================================================= */
+
 (() => {
-  const body = document.documentElement;
-  const themeToggle = document.getElementById('themeToggle');
-  const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-  const nav = document.getElementById('navbar');
-  const yearEl = document.getElementById('year');
-  const editCertsBtn = document.getElementById('editCertsBtn');
-  const certList = document.getElementById('certList');
-  const loadSample = document.getElementById('loadSample');
-  const downloadResume = document.getElementById('downloadResume');
+  'use strict';
 
-  // Set year
-  if(yearEl) yearEl.textContent = new Date().getFullYear();
+  /* ─── THEME ────────────────────────────────────────────── */
+  const html       = document.documentElement;
+  const themeBtn   = document.getElementById('themeBtn');
+  const themeIcon  = document.getElementById('themeIcon');
 
-  // Theme: persist in localStorage
-  const savedTheme = localStorage.getItem('theme') || (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-  if(savedTheme === 'dark') body.setAttribute('data-theme','dark');
-  else body.removeAttribute('data-theme');
+  const savedTheme = localStorage.getItem('theme') ||
+    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
 
-  themeToggle.addEventListener('click', () => {
-    if(body.getAttribute('data-theme') === 'dark') {
-      body.removeAttribute('data-theme');
-      localStorage.setItem('theme','light');
-      themeToggle.textContent = '🌙';
-    } else {
-      body.setAttribute('data-theme','dark');
-      localStorage.setItem('theme','dark');
-      themeToggle.textContent = '☀️';
-    }
+  const applyTheme = (t) => {
+    html.setAttribute('data-theme', t);
+    themeIcon.textContent = t === 'dark' ? '☀️' : '🌙';
+    localStorage.setItem('theme', t);
+  };
+  applyTheme(savedTheme);
+  themeBtn.addEventListener('click', () => {
+    applyTheme(html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark');
   });
 
-  // Mobile menu toggle
-  mobileMenuBtn.addEventListener('click', () => {
-    if(nav.style.display === 'block') {
-      nav.style.display = '';
-    } else {
-      nav.style.display = 'block';
-      nav.style.position = 'absolute';
-      nav.style.right = '1rem';
-      nav.style.top = '64px';
-      nav.style.background = 'var(--card)';
-      nav.style.padding = '0.8rem';
-      nav.style.borderRadius = '10px';
-      nav.style.boxShadow = 'var(--shadow)';
-    }
+  /* ─── MOBILE MENU ───────────────────────────────────────── */
+  const menuBtn   = document.getElementById('menuBtn');
+  const mobileNav = document.getElementById('mobileNav');
+  menuBtn.addEventListener('click', () => mobileNav.classList.toggle('open'));
+  mobileNav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => mobileNav.classList.remove('open'));
   });
 
-  // Smooth scrolling for anchor links
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', function(e){
-      const target = document.querySelector(this.getAttribute('href'));
-      if(target){
-        e.preventDefault();
-        target.scrollIntoView({behavior:'smooth', block:'start'});
-        // close mobile nav
-        if(window.innerWidth < 900 && nav.style.display === 'block'){
-          nav.style.display = '';
-        }
+  /* ─── ACTIVE NAV LINK ON SCROLL ─────────────────────────── */
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a, .mobile-nav a');
+  const activateNav = () => {
+    let active = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 120) active = s.id;
+    });
+    navLinks.forEach(l => {
+      l.classList.toggle('active', l.getAttribute('href') === '#' + active);
+    });
+  };
+  window.addEventListener('scroll', activateNav, { passive: true });
+  activateNav();
+
+  /* ─── TYPING ANIMATION ──────────────────────────────────── */
+  const roles = [
+    'Backend Developer',
+    'Java Enthusiast',
+    'Problem Solver',
+    'DSA Practitioner',
+    'Full Stack Developer'
+  ];
+  const typedEl = document.getElementById('typedText');
+  let roleIdx = 0, charIdx = 0, deleting = false;
+  const typeLoop = () => {
+    const current = roles[roleIdx];
+    if (!deleting) {
+      typedEl.textContent = current.slice(0, ++charIdx);
+      if (charIdx === current.length) { deleting = true; return setTimeout(typeLoop, 1800); }
+    } else {
+      typedEl.textContent = current.slice(0, --charIdx);
+      if (charIdx === 0) { deleting = false; roleIdx = (roleIdx + 1) % roles.length; }
+    }
+    setTimeout(typeLoop, deleting ? 60 : 100);
+  };
+  setTimeout(typeLoop, 600);
+
+  /* ─── SCROLL AOS ──────────────────────────────────────────  */
+  const aosObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        const delay = +(e.target.dataset.aosDelay || 0);
+        setTimeout(() => e.target.classList.add('aos-animate'), delay);
+        aosObserver.unobserve(e.target);
       }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('[data-aos]').forEach(el => aosObserver.observe(el));
+
+  /* ─── SKILL BAR ANIMATION ───────────────────────────────── */
+  const skillObserver = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.querySelectorAll('.skill-fill[data-level]').forEach(bar => {
+          setTimeout(() => { bar.style.width = bar.dataset.level + '%'; }, 200);
+        });
+        skillObserver.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.2 });
+  const skillSection = document.getElementById('skills');
+  if (skillSection) skillObserver.observe(skillSection);
+
+  /* ─── PROJECT FILTERING ─────────────────────────────────── */
+  const filterBtns    = document.querySelectorAll('.filter-btn');
+  const projectCards  = document.querySelectorAll('.project-card');
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const tag = btn.dataset.filter;
+      projectCards.forEach(card => {
+        const show = tag === 'all' || card.dataset.tags.includes(tag);
+        card.style.display = show ? '' : 'none';
+        if (show) {
+          card.style.animation = 'none';
+          requestAnimationFrame(() => {
+            card.style.animation = 'fadeUp 0.4s ease both';
+          });
+        }
+      });
     });
   });
 
-  // Edit certifications (simple prompt-based editing)
-  editCertsBtn.addEventListener('click', () => {
-    const existing = Array.from(certList.querySelectorAll('li')).map(li => li.textContent).join('\n');
-    const input = prompt('Paste your certifications (one per line). You can also paste items copied from LinkedIn page:', existing);
-    if(input !== null){
-      const lines = input.split('\n').map(s => s.trim()).filter(Boolean);
-      certList.innerHTML = '';
-      if(lines.length === 0){
-        const li = document.createElement('li');
-        li.textContent = 'No certifications listed here yet. Click "Edit Certifications" to paste them.';
-        certList.appendChild(li);
-      } else {
-        for(const line of lines){
-          const li = document.createElement('li');
-          li.textContent = line;
-          certList.appendChild(li);
-        }
+  /* ─── SKILLS CATEGORY FILTER ────────────────────────────── */
+  const catBtns   = document.querySelectorAll('.cat-btn');
+  const skillCards = document.querySelectorAll('.skill-card');
+  catBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      catBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const cat = btn.dataset.cat;
+      skillCards.forEach(card => {
+        card.style.display = (cat === 'all' || card.dataset.cat === cat) ? '' : 'none';
+      });
+    });
+  });
+
+  /* ─── CONTACT FORM ──────────────────────────────────────── */
+  const form   = document.getElementById('contactForm');
+  const status = document.getElementById('formStatus');
+  if (form) {
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const data = new FormData(form);
+      const name    = data.get('name').trim();
+      const email   = data.get('email').trim();
+      const message = data.get('message').trim();
+      if (!name || !email || !message) {
+        status.textContent = 'Please fill in all fields.';
+        status.className   = 'form-status error';
+        return;
       }
-    }
-  });
-
-  // Insert sample certs for demonstration
-  loadSample.addEventListener('click', () => {
-    const sample = [
-      'Problem Solving (Intermediate) — HackerRank',
-      'Java Programming — Coursera',
-      'Data Structures & Algorithms — NPTEL'
-    ];
-    certList.innerHTML = '';
-    for(const s of sample){
-      const li = document.createElement('li');
-      li.textContent = s;
-      certList.appendChild(li);
-    }
-  });
-
-  // Contact form handler (stub)
-window.handleContact = function(e){
-  e.preventDefault();
-  
-  const form = e.target;
-  const name = form.name.value.trim();
-  const email = form.email.value.trim();
-  const message = form.message.value.trim();
-
-  // Construct mailto link
-  const subject = encodeURIComponent(`Portfolio Inquiry from ${name}`);
-  const body = encodeURIComponent(
-    `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-  );
-
-  // Replace with your actual email
-  const mailtoLink = `mailto:sandkrish3511@gmail.com?subject=${subject}&body=${body}`;
-
-  // Open the user's email client
-  window.location.href = mailtoLink;
-
-  return false;
-};
-
-  // If resume link is broken, warn in console (helps during local testing)
-  if(downloadResume && downloadResume.getAttribute('href') === 'resume.pdf'){
-    fetch(downloadResume.getAttribute('href'), { method: 'HEAD' }).catch(()=> {
-      console.info('Tip: Place your resume PDF in the site folder as "resume.pdf" or change the link in index.html.');
+      const sub  = encodeURIComponent(`Portfolio Inquiry from ${name}`);
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+      window.location.href = `mailto:sandkrish3511@gmail.com?subject=${sub}&body=${body}`;
+      status.textContent = '✓ Opening your mail app…';
+      status.className   = 'form-status success';
+      form.reset();
     });
   }
+
+  /* ─── FOOTER YEAR ───────────────────────────────────────── */
+  const yearEl = document.getElementById('year');
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
 
 })();
