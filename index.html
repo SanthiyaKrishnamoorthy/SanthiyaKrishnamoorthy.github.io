@@ -1,24 +1,687 @@
-<section id="projects">
-    <h2>Projects</h2>
-    <div class="project-card"><a href="https://github.com/logarathansv/PyDebugger---LLM-RAG-Integrated-Learning-Platform">Project 1: PyDebugger</a></div>
-    <div class="project-card"><a href="https://github.com/SanthiyaKrishnamoorthy/tnpsc-coaching-centre-management-system">Project 2: TNPSC Coaching Centre Management System</a></div>
-    <div class="project-card"><a href="https://github.com/SanthiyaKrishnamoorthy/feedback-collector-firebase">Project 3: Feedback Collector</a></div>
-    <div class="project-card"><a href="https://github.com/SanthiyaKrishnamoorthy/finance-dashboard-backend">Project 4: Finance Dashboard Backend</a></div>
-</section>
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Santhiya K — Software Engineer Portfolio</title>
+  <meta name="description" content="Santhiya K — Final-year CSE student building backend systems with Java, Spring Boot, Node.js & AI. Open to internships and SWE roles." />
+  <meta property="og:title" content="Santhiya K — Software Engineer" />
+  <meta property="og:description" content="Backend developer, problem solver, and final-year CS student targeting product companies." />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+</head>
+<body>
 
-<section id="certifications">
-    <h2>Certifications</h2>
-    <div class="certs-grid">
-        <div class="cert-card"><a href="https://www.credly.com/badges/9a5f7c11-384b-40a8-8748-0dc38eaedde8">Credential 1</a></div>
-        <div class="cert-card"><a href="https://www.credly.com/badges/cb9f4589-5489-4ad8-85c0-7690c7efc269">Credential 2</a></div>
-        <div class="cert-card"><a href="https://coursera.org/share/b33a04722408a162ad544d0afd3cad32">Credential 3</a></div>
-        <div class="cert-card">Java Programming – NPTEL</div>
-        <div class="cert-card">Power BI – Data Visualization & Reporting</div>
+  <!-- ═══════════════════════════════════════════════════════
+       NAV
+  ═════════════════════════════════════════════════════════ -->
+  <header class="nav" role="banner">
+    <div class="container nav-inner">
+      <a class="nav-brand" href="#home">Santhiya<span>.</span>dev</a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav-controls">
+        <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">
+          <span id="themeIcon">☀️</span>
+        </button>
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle mobile menu">☰</button>
+      </div>
     </div>
-</section>
+  </header>
 
-<form>
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" required>
-    <!-- other fields remain unchanged -->
-</form>
+  <!-- Mobile nav -->
+  <nav id="mobileNav" class="mobile-nav" aria-label="Mobile navigation">
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#achievements">Achievements</a>
+    <a href="#education">Education</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <main>
+    <!-- ═══════════════════════════════════════════════════════
+         HERO
+    ═════════════════════════════════════════════════════════ -->
+    <section id="home" class="hero">
+      <div class="hero-bg">
+        <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
+        <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+      </div>
+
+      <div class="container hero-grid">
+        <!-- Left: Text -->
+        <div class="hero-text">
+          <div class="hero-eyebrow">
+            <span class="hero-dot" aria-hidden="true"></span>
+            <span class="tag">Open to internships &amp; SWE roles</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm<br>
+            <span class="name">Santhiya K</span>
+          </h1>
+
+          <p class="hero-subtitle" aria-live="polite">
+            <span id="typedText" class="typed-text"></span><span class="hero-cursor" aria-hidden="true"></span>
+          </p>
+
+          <p class="hero-desc">
+            Final-year CSE student at Anna University building production-grade backend systems,
+            REST APIs, and AI-powered applications. Targeting product companies like Google, Amazon, and Microsoft.
+          </p>
+
+          <div class="hero-ctas">
+            <a class="btn-primary" href="#projects">
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+              View Projects
+            </a>
+            <a class="btn-secondary" href="resume.pdf" download>
+              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414A1 1 0 0120 9.414V19a2 2 0 01-2 2z"/></svg>
+              Download Resume
+            </a>
+            <a class="btn-secondary" href="#contact">Contact Me →</a>
+          </div>
+
+          <ul class="hero-info" aria-label="Contact info">
+            <li class="hero-info-item">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+              Chennai, Tamil Nadu
+            </li>
+            <li class="hero-info-item">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+              sandkrish3511@gmail.com
+            </li>
+            <li class="hero-info-item">
+              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
+              +91 93429 65358
+            </li>
+          </ul>
+        </div>
+
+        <!-- Right: Card -->
+        <aside class="hero-card" aria-label="Quick profile">
+          <div class="avatar" aria-hidden="true">SK</div>
+          <div class="hero-card-title">Santhiya K</div>
+          <div class="hero-card-sub mono">Final-year CSE @ MIT Campus, Anna University</div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <div class="hero-stat-num">4+</div>
+              <div class="hero-stat-label">Real Projects</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-num">7.44</div>
+              <div class="hero-stat-label">CGPA</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-num">4+</div>
+              <div class="hero-stat-label">Certifications</div>
+            </div>
+            <div class="hero-stat">
+              <div class="hero-stat-num">93%</div>
+              <div class="hero-stat-label">HSC Score</div>
+            </div>
+          </div>
+          <div class="hero-tech-stack">
+            <div class="hero-tech-label">Core Stack</div>
+            <div class="tech-pills">
+              <span class="tech-pill">Java</span>
+              <span class="tech-pill">Spring Boot</span>
+              <span class="tech-pill">Node.js</span>
+              <span class="tech-pill">MySQL</span>
+              <span class="tech-pill">JWT</span>
+              <span class="tech-pill">Python</span>
+              <span class="tech-pill">Git</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         ABOUT
+    ═════════════════════════════════════════════════════════ -->
+    <section id="about" class="section section-alt">
+      <div class="container">
+        <div class="section-header" data-aos>
+          <div class="section-label">About Me</div>
+          <h2 class="section-title">From curious student to<br>backend builder</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-story" data-aos>
+            <p>
+              I'm a <strong>final-year Computer Science student</strong> at MIT Campus, Anna University — 
+              and I don't just study software engineering, I practice it. 
+              I've built real backend systems with authentication, database layers, REST APIs, and even AI integrations.
+            </p>
+            <p>
+              My journey started with competitive programming and DSA, which sharpened my problem-solving instinct. 
+              That foundation led me to build a <strong>Spring Boot + JWT backend</strong> for a coaching management 
+              system, an <strong>AI-powered Python debugging assistant</strong> using RAG and LangChain, 
+              and a <strong>Node.js finance dashboard backend</strong> with SQLite.
+            </p>
+            <p>
+              I'm actively targeting <strong>product-based companies like Amazon, Google, and Microsoft</strong> — 
+              working on system design, DSA, and CS fundamentals every day to get there.
+            </p>
+            <div class="about-highlights">
+              <div class="highlight-item">
+                <span class="highlight-icon" aria-hidden="true">🎯</span>
+                <span>Strong DSA foundation — actively solving problems daily</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon" aria-hidden="true">⚙️</span>
+                <span>Backend-focused: REST APIs, Auth systems, Databases</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon" aria-hidden="true">🤖</span>
+                <span>Exploring AI/ML — built a RAG + LLM project from scratch</span>
+              </div>
+              <div class="highlight-item">
+                <span class="highlight-icon" aria-hidden="true">📦</span>
+                <span>Shipped 4 real projects with public GitHub repos</span>
+              </div>
+            </div>
+          </div>
+          <div class="about-cards" data-aos data-aos-delay="150">
+            <div class="info-card">
+              <div class="info-card-head">
+                <div class="info-card-icon" aria-hidden="true">💻</div>
+                <div class="info-card-title">Languages & Backend</div>
+              </div>
+              <ul class="info-card-list">
+                <li>Java, C, JavaScript, Python, SQL</li>
+                <li>Spring Boot, Node.js / Express</li>
+                <li>JWT Authentication, REST APIs</li>
+                <li>HTML, CSS, PHP (frontend)</li>
+              </ul>
+            </div>
+            <div class="info-card">
+              <div class="info-card-head">
+                <div class="info-card-icon" aria-hidden="true">🛠️</div>
+                <div class="info-card-title">Tools & Databases</div>
+              </div>
+              <ul class="info-card-list">
+                <li>Git &amp; GitHub, Figma</li>
+                <li>MySQL, SQLite, Firebase</li>
+                <li>LangChain, Streamlit</li>
+                <li>Power BI, AWS</li>
+              </ul>
+            </div>
+            <div class="info-card">
+              <div class="info-card-head">
+                <div class="info-card-icon" aria-hidden="true">🌱</div>
+                <div class="info-card-title">Soft Skills</div>
+              </div>
+              <ul class="info-card-list">
+                <li>Adaptability &amp; quick learning</li>
+                <li>Clear communication</li>
+                <li>Time management</li>
+                <li>Tamil (Native) · English (Professional)</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         SKILLS
+    ═════════════════════════════════════════════════════════ -->
+    <section id="skills" class="section">
+      <div class="container">
+        <div class="section-header" data-aos>
+          <div class="section-label">Technical Skills</div>
+          <h2 class="section-title">What I work with</h2>
+          <p class="section-desc">From core programming languages to backend frameworks, databases, and developer tools.</p>
+        </div>
+
+        <div class="skills-categories" data-aos>
+          <button class="cat-btn active" data-cat="all">All</button>
+          <button class="cat-btn" data-cat="lang">Languages</button>
+          <button class="cat-btn" data-cat="backend">Backend</button>
+          <button class="cat-btn" data-cat="db">Databases</button>
+          <button class="cat-btn" data-cat="tools">Tools</button>
+        </div>
+
+        <div class="skills-grid" data-aos>
+          <!-- Languages -->
+          <div class="skill-card" data-cat="lang">
+            <span class="skill-icon" aria-hidden="true">☕</span>
+            <div class="skill-name">Java</div>
+            <div class="skill-bar"><div class="skill-fill" data-level="85" style="width:0"></div></div>
+          </div>
+          <div class="skill-card" data-cat="lang">
+            <span class="skill-icon" aria-hidden="true">🐍</span>
+            <div class="skill-name">Python</div>
+            <div class="skill-bar"><div class="skill-fill" data-level="75" style="width:0"></div></div>
+          </div>
+          <div class="skill-card" data-cat="lang">
+            <span class="skill-icon" aria-hidden="true">🌐</span>
+            <div class="skill-name">JavaScript</div>
+            <div class="skill-bar"><div class="skill-fill" data-level="72" style="width:0"></div></div>
+          </div>
+          <div class="skill-card" data-cat="lang">
+            <span class="skill-icon" aria-hidden="true">🅒</span>
+            <div class="skill-name">C</div>
+            <div class="skill-bar"><div class="skill-fill" data-level="70" style="width:0"></div></div>
+          </div>
+          <div class="skill-card" data-cat="lang">
+            <span class="skill-icon" aria-hidden="true">🗃️</span>
+            <div class="skill-name">SQL</div>
+            <div class="skill-bar"><div class="skill-fill" data-level="80" style="width:0"></div></div>
+          </div>
+
+          <!-- Backend -->
+          <div class="skill-card" data-cat="backend">
+            <span class="skill-icon" aria-hidden="true">🍃</span>
+            <div class="skill-name">Spring Boot</div>
+            <div class="skill-bar"><div class="skill-fill" data-level="75" style="width:0"></div></div>
+          </div>
+          <div class="skill-card" data-cat="backend">
+            <span class="skill-icon" aria-hidden="true">🟩</span>
+            <div class="skill-name">Node.js / Express</div>
+            <div class="skill-bar"><div class="skill-fill" data-level="70" style="width:0"></div></div>
+          </div>
+          <div class="skill-card" data-cat="backend">
+            <span class="skill-icon" aria-hidden="true">🔑</span>
+            <div class="skill-name">JWT Auth</div>
+            <div class="skill-bar"><div class="skill-fill" data-level="78" style="width:0"></div></div>
+          </div>
+          <div class="skill-card" data-cat="backend">
+            <span class="skill-icon" aria-hidden="true">🤖</span>
+            <div class="skill-name">LangChain / RAG</div>
+            <div class="skill-bar"><div class="skill-fill" data-level="65" style="width:0"></div></div>
+          </div>
+          <div class="skill-card" data-cat="backend">
+            <span class="skill-icon" aria-hidden="true">🔗</span>
+            <div class="skill-name">REST APIs</div>
+            <div class="skill-bar"><div class="skill-fill" data-level="80" style="width:0"></div></div>
+          </div>
+
+          <!-- Databases -->
+          <div class="skill-card" data-cat="db">
+            <span class="skill-icon" aria-hidden="true">🐬</span>
+            <div class="skill-name">MySQL</div>
+            <div class="skill-bar"><div class="skill-fill" data-level="80" style="width:0"></div></div>
+          </div>
+          <div class="skill-card" data-cat="db">
+            <span class="skill-icon" aria-hidden="true">🔷</span>
+            <div class="skill-name">SQLite</div>
+            <div class="skill-bar"><div class="skill-fill" data-level="72" style="width:0"></div></div>
+          </div>
+          <div class="skill-card" data-cat="db">
+            <span class="skill-icon" aria-hidden="true">🔥</span>
+            <div class="skill-name">Firebase</div>
+            <div class="skill-bar"><div class="skill-fill" data-level="68" style="width:0"></div></div>
+          </div>
+          <div class="skill-card" data-cat="db">
+            <span class="skill-icon" aria-hidden="true">🔌</span>
+            <div class="skill-name">JDBC</div>
+            <div class="skill-bar"><div class="skill-fill" data-level="75" style="width:0"></div></div>
+          </div>
+
+          <!-- Tools -->
+          <div class="skill-card" data-cat="tools">
+            <span class="skill-icon" aria-hidden="true">🐙</span>
+            <div class="skill-name">Git &amp; GitHub</div>
+            <div class="skill-bar"><div class="skill-fill" data-level="82" style="width:0"></div></div>
+          </div>
+          <div class="skill-card" data-cat="tools">
+            <span class="skill-icon" aria-hidden="true">☁️</span>
+            <div class="skill-name">AWS Basics</div>
+            <div class="skill-bar"><div class="skill-fill" data-level="55" style="width:0"></div></div>
+          </div>
+          <div class="skill-card" data-cat="tools">
+            <span class="skill-icon" aria-hidden="true">📊</span>
+            <div class="skill-name">Power BI</div>
+            <div class="skill-bar"><div class="skill-fill" data-level="60" style="width:0"></div></div>
+          </div>
+          <div class="skill-card" data-cat="tools">
+            <span class="skill-icon" aria-hidden="true">🎨</span>
+            <div class="skill-name">Figma</div>
+            <div class="skill-bar"><div class="skill-fill" data-level="60" style="width:0"></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         PROJECTS
+    ═════════════════════════════════════════════════════════ -->
+    <section id="projects" class="section section-alt">
+      <div class="container">
+        <div class="section-header" data-aos>
+          <div class="section-label">Projects</div>
+          <h2 class="section-title">Things I've built</h2>
+          <p class="section-desc">Real-world systems with production patterns — authentication, APIs, AI, and databases.</p>
+        </div>
+
+        <div class="project-filters" data-aos>
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="java">Java</button>
+          <button class="filter-btn" data-filter="python">Python / AI</button>
+          <button class="filter-btn" data-filter="backend">Backend</button>
+          <button class="filter-btn" data-filter="firebase">Firebase</button>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Project 1: AI Python Debugger -->
+          <article class="project-card" data-tags="python ai backend" data-aos>
+            <div class="project-header">
+              <div class="project-icon" aria-hidden="true">🤖</div>
+              <div class="project-links">
+                <a class="icon-btn" href="https://github.com/logarathansv/PyDebugger---LLM-RAG-Integrated-Learning-Platform" target="_blank" rel="noopener" aria-label="View source on GitHub" title="GitHub">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-problem">Problem Statement</div>
+            <h3 class="project-title">AI Python Debugging Assistant</h3>
+            <p class="project-desc">
+              Students learning Python struggle to get contextual, course-specific help. Built an AI-powered assistant using Retrieval-Augmented Generation (RAG) + LLMs that understands your course material and helps debug Python code in real time.
+            </p>
+            <div class="project-features">
+              <div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>RAG pipeline with LangChain for context-aware answers</div>
+              <div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>Real-time Python sandbox for interactive debugging</div>
+              <div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>Streamlit UI for seamless student experience</div>
+              <div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>Course-specific document retrieval system</div>
+            </div>
+            <div class="project-tags">
+              <span class="project-tag">Python</span>
+              <span class="project-tag">LangChain</span>
+              <span class="project-tag">RAG</span>
+              <span class="project-tag">LLM</span>
+              <span class="project-tag">Streamlit</span>
+            </div>
+          </article>
+
+          <!-- Project 2: TNPSC -->
+          <article class="project-card" data-tags="java backend" data-aos data-aos-delay="100">
+            <div class="project-header">
+              <div class="project-icon" aria-hidden="true">🏫</div>
+              <div class="project-links">
+                <a class="icon-btn" href="https://github.com/SanthiyaKrishnamoorthy/tnpsc-coaching-centre-management-system" target="_blank" rel="noopener" aria-label="View source on GitHub" title="GitHub">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-problem">Problem Statement</div>
+            <h3 class="project-title">TNPSC Coaching Centre Management System</h3>
+            <p class="project-desc">
+              Coaching centres managing TNPSC aspirants relied on paper-based tracking. Built a full backend system with Spring Boot + JWT to manage student enrollments, course progress, exam schedules, and admin operations securely.
+            </p>
+            <div class="project-features">
+              <div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>JWT-based authentication &amp; role-based access control</div>
+              <div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>RESTful APIs for student &amp; course management</div>
+              <div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>MySQL database with JDBC for data persistence</div>
+              <div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>Modular architecture ready for web/mobile frontend</div>
+            </div>
+            <div class="project-tags">
+              <span class="project-tag">Java</span>
+              <span class="project-tag">Spring Boot</span>
+              <span class="project-tag">JWT</span>
+              <span class="project-tag">MySQL</span>
+              <span class="project-tag">JDBC</span>
+            </div>
+          </article>
+
+          <!-- Project 3: Finance Dashboard Backend -->
+          <article class="project-card" data-tags="backend" data-aos data-aos-delay="200">
+            <div class="project-header">
+              <div class="project-icon" aria-hidden="true">💹</div>
+              <div class="project-links">
+                <a class="icon-btn" href="https://github.com/SanthiyaKrishnamoorthy/finance-dashboard-backend" target="_blank" rel="noopener" aria-label="View source on GitHub" title="GitHub">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-problem">Problem Statement</div>
+            <h3 class="project-title">Finance Dashboard Backend</h3>
+            <p class="project-desc">
+              Personal finance apps often lack a secure, structured backend. Built a Node.js + Express REST API with JWT authentication and SQLite to power a finance tracking dashboard with user isolation and full CRUD operations.
+            </p>
+            <div class="project-features">
+              <div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>Secure JWT-based user authentication</div>
+              <div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>CRUD operations for transactions &amp; categories</div>
+              <div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>Per-user data isolation with SQLite</div>
+              <div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>Clean RESTful API design with Express middleware</div>
+            </div>
+            <div class="project-tags">
+              <span class="project-tag">Node.js</span>
+              <span class="project-tag">Express</span>
+              <span class="project-tag">JWT</span>
+              <span class="project-tag">SQLite</span>
+              <span class="project-tag">REST API</span>
+            </div>
+          </article>
+
+          <!-- Project 4: Feedback Collector -->
+          <article class="project-card" data-tags="firebase backend" data-aos data-aos-delay="300">
+            <div class="project-header">
+              <div class="project-icon" aria-hidden="true">💬</div>
+              <div class="project-links">
+                <a class="icon-btn" href="https://github.com/SanthiyaKrishnamoorthy/feedback-collector-firebase" target="_blank" rel="noopener" aria-label="View source on GitHub" title="GitHub">
+                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+                </a>
+              </div>
+            </div>
+            <div class="project-problem">Problem Statement</div>
+            <h3 class="project-title">Feedback Collector Web App</h3>
+            <p class="project-desc">
+              Collecting and managing event/product feedback in real time is painful with traditional forms. Built a live Firebase-powered web app for collecting, storing, and displaying feedback with real-time Firestore sync.
+            </p>
+            <div class="project-features">
+              <div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>Real-time Firestore data sync — no refresh needed</div>
+              <div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>Firebase Authentication for user sessions</div>
+              <div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>Clean responsive UI with form validation</div>
+              <div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>Admin view for managing all responses</div>
+            </div>
+            <div class="project-tags">
+              <span class="project-tag">JavaScript</span>
+              <span class="project-tag">Firebase</span>
+              <span class="project-tag">Firestore</span>
+              <span class="project-tag">HTML/CSS</span>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         ACHIEVEMENTS
+    ═════════════════════════════════════════════════════════ -->
+    <section id="achievements" class="section">
+      <div class="container">
+        <div class="section-header" data-aos>
+          <div class="section-label">Certifications &amp; Achievements</div>
+          <h2 class="section-title">Learning that counts</h2>
+        </div>
+        <div class="achiev-grid">
+          <div class="achiev-card" data-aos>
+            <div class="achiev-icon" aria-hidden="true">☁️</div>
+            <div>
+              <div class="achiev-title">AWS Cloud Foundations</div>
+              <div class="achiev-issuer">Amazon Web Services</div>
+            </div>
+          </div>
+          <div class="achiev-card" data-aos data-aos-delay="100">
+            <div class="achiev-icon" aria-hidden="true">🤖</div>
+            <div>
+              <div class="achiev-title">Google GenAI Study Jam</div>
+              <div class="achiev-issuer">Google Cloud / GDSC</div>
+            </div>
+          </div>
+          <div class="achiev-card" data-aos data-aos-delay="200">
+            <div class="achiev-icon" aria-hidden="true">📊</div>
+            <div>
+              <div class="achiev-title">Data Structures &amp; Algorithms</div>
+              <div class="achiev-issuer">Amazon / Coursera</div>
+            </div>
+          </div>
+          <div class="achiev-card" data-aos data-aos-delay="300">
+            <div class="achiev-icon" aria-hidden="true">📈</div>
+            <div>
+              <div class="achiev-title">Power BI Certification</div>
+              <div class="achiev-issuer">Microsoft / Coursera</div>
+            </div>
+          </div>
+          <div class="achiev-card" data-aos data-aos-delay="100">
+            <div class="achiev-icon" aria-hidden="true">💼</div>
+            <div>
+              <div class="achiev-title">LinkedIn</div>
+              <div class="achiev-issuer"><a href="https://www.linkedin.com/in/santhiya-k-6782b1256/" target="_blank" rel="noopener" style="color:var(--accent)">View Full Profile →</a></div>
+            </div>
+          </div>
+          <div class="achiev-card" data-aos data-aos-delay="200">
+            <div class="achiev-icon" aria-hidden="true">🐙</div>
+            <div>
+              <div class="achiev-title">GitHub Portfolio</div>
+              <div class="achiev-issuer"><a href="https://github.com/SanthiyaKrishnamoorthy" target="_blank" rel="noopener" style="color:var(--accent)">@SanthiyaKrishnamoorthy →</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         EDUCATION
+    ═════════════════════════════════════════════════════════ -->
+    <section id="education" class="section section-alt">
+      <div class="container">
+        <div class="section-header" data-aos>
+          <div class="section-label">Education</div>
+          <h2 class="section-title">Academic background</h2>
+        </div>
+        <div style="max-width: 680px;">
+          <div class="edu-timeline">
+
+            <div class="edu-item" data-aos>
+              <div class="edu-dot" aria-hidden="true"></div>
+              <div class="edu-card">
+                <div class="edu-degree">B.E. Computer Science &amp; Engineering</div>
+                <div class="edu-school">MIT Campus, Anna University — Chennai, Tamil Nadu</div>
+                <div class="edu-meta">
+                  <span class="edu-badge">CGPA: 7.44</span>
+                  <span class="edu-badge">Oct 2022 – Present</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="edu-item" data-aos data-aos-delay="150">
+              <div class="edu-dot" aria-hidden="true"></div>
+              <div class="edu-card">
+                <div class="edu-degree">Higher Secondary Certificate (HSC)</div>
+                <div class="edu-school">Mount Park Higher Secondary School — Kallakurichi, Tamil Nadu</div>
+                <div class="edu-meta">
+                  <span class="edu-badge">Score: 93.83%</span>
+                  <span class="edu-badge">June 2020 – 2022</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════════
+         CONTACT
+    ═════════════════════════════════════════════════════════ -->
+    <section id="contact" class="section">
+      <div class="container">
+        <div class="section-header" data-aos>
+          <div class="section-label">Contact</div>
+          <h2 class="section-title">Let's connect</h2>
+          <p class="section-desc">Open to internships, full-time SWE roles, and collaboration. Reach out!</p>
+        </div>
+        <div class="contact-grid">
+          <div class="contact-info" data-aos>
+            <p>
+              I'm actively looking for <strong>SWE internships and full-time roles</strong> at product companies.
+              If you're hiring or want to collaborate on a project, I'd love to hear from you.
+            </p>
+            <div class="contact-links">
+              <a class="contact-link" href="mailto:sandkrish3511@gmail.com">
+                <div class="contact-link-icon" aria-hidden="true">✉️</div>
+                <div class="contact-link-text">
+                  <span class="contact-link-label">Email</span>
+                  sandkrish3511@gmail.com
+                </div>
+              </a>
+              <a class="contact-link" href="https://www.linkedin.com/in/santhiya-k-6782b1256/" target="_blank" rel="noopener">
+                <div class="contact-link-icon" aria-hidden="true">💼</div>
+                <div class="contact-link-text">
+                  <span class="contact-link-label">LinkedIn</span>
+                  santhiya-k-6782b1256
+                </div>
+              </a>
+              <a class="contact-link" href="https://github.com/SanthiyaKrishnamoorthy" target="_blank" rel="noopener">
+                <div class="contact-link-icon" aria-hidden="true">🐙</div>
+                <div class="contact-link-text">
+                  <span class="contact-link-label">GitHub</span>
+                  @SanthiyaKrishnamoorthy
+                </div>
+              </a>
+              <a class="contact-link" href="tel:+919342965358">
+                <div class="contact-link-icon" aria-hidden="true">📞</div>
+                <div class="contact-link-text">
+                  <span class="contact-link-label">Phone</span>
+                  +91 93429 65358
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="contact-form-wrap" data-aos data-aos-delay="150">
+            <form id="contactForm" novalidate>
+              <div class="form-group">
+                <label for="name">Name</label>
+                <input id="name" name="name" type="text" placeholder="Your full name" autocomplete="name" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="email" placeholder="your@email.com" autocomplete="email" />
+              </div>
+              <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" placeholder="Tell me about the opportunity or what you'd like to discuss…"></textarea>
+              </div>
+              <button class="btn-primary" type="submit" style="width:100%;justify-content:center;">
+                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
+                Send Message
+              </button>
+              <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════════
+       FOOTER
+  ═════════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <p>
+        © <span id="year"></span> Santhiya K — Built with ♥ in Chennai ·
+        <a href="resume.pdf" download>Download Resume</a> ·
+        <a href="https://github.com/SanthiyaKrishnamoorthy/SanthiyaKrishnamoorthy.github.io" target="_blank" rel="noopener">View Source</a>
+      </p>
+    </div>
+  </footer>
+  <script src="js/main.js" defer></script>
+</body>
+</html>
