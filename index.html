@@ -1,612 +1,227 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" data-theme="dark">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Santhiya K — Software Engineer Portfolio</title>
-  <meta name="description" content="Santhiya K — Final-year CSE student building backend systems with Java, Spring Boot, Node.js & AI. Open to internships and SWE roles." />
-  <meta property="og:title" content="Santhiya K — Software Engineer" />
-  <meta property="og:description" content="Backend developer, problem solver, and final-year CS student targeting product companies." />
-  <link rel="stylesheet" href="css/master.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Santhiya Krishnamoorthy — Backend Developer | Java · DSA · Spring Boot</title>
+  <meta name="description" content="Santhiya Krishnamoorthy — Backend Developer with 250+ DSA problems solved. Java, Spring Boot, REST APIs. Targeting SWE roles at top product companies." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&family=Syne:wght@700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="master.css" />
 </head>
 <body>
 
-  <!-- ═══════════════════════════════════════════════════════
-       NAV
-  ═════════════════════════════════════════════════════════ -->
-  <header class="nav" role="banner">
-    <div class="container nav-inner">
-      <a class="nav-brand" href="#home">Santhiya<span>.</span>dev</a>
-      <nav class="nav-links" aria-label="Main navigation">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#achievements">Achievements</a>
-        <a href="#education">Education</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="nav-controls">
-        <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">
-          <span id="themeIcon">☀️</span>
-        </button>
-        <a class="btn-primary" href="resume.pdf" download>Download Resume</a>
-        <button class="menu-btn" id="menuBtn" aria-label="Toggle mobile menu">☰</button>
-      </div>
+<header class="nav" role="banner">
+  <div class="container nav-inner">
+    <a class="nav-brand" href="#home">Santhiya<span>.</span>dev</a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#leetcode">LeetCode</a>
+      <a href="#learning">Learning</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-controls">
+      <a class="nav-resume" href="resume.pdf" download aria-label="Download Resume">
+        <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414A1 1 0 0120 9.414V19a2 2 0 01-2 2z"/></svg>
+        Resume
+      </a>
+      <button class="icon-control" id="themeBtn" aria-label="Toggle theme"><span id="themeIcon">☀️</span></button>
+      <button class="icon-control menu-btn" id="menuBtn" aria-label="Menu">☰</button>
     </div>
-  </header>
+  </div>
+</header>
+<nav id="mobileNav" class="mobile-nav" aria-label="Mobile navigation">
+  <a href="#home">Home</a><a href="#about">About</a><a href="#skills">Skills</a>
+  <a href="#projects">Projects</a><a href="#leetcode">LeetCode</a>
+  <a href="#learning">Learning</a><a href="#contact">Contact</a>
+</nav>
 
-  <!-- Mobile nav -->
-  <nav id="mobileNav" class="mobile-nav" aria-label="Mobile navigation">
-    <a href="#home">Home</a>
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-    <a href="#achievements">Achievements</a>
-    <a href="#education">Education</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<main>
 
-  <main>
-    <!-- ═══════════════════════════════════════════════════════
-         HERO
-    ═════════════════════════════════════════════════════════ -->
-    <section id="home" class="hero">
-  <div class="container hero-grid">
+<!-- HERO (right card removed) -->
+<section id="home" class="hero">
+  <div class="hero-bg" aria-hidden="true">
+    <div class="orb orb1"></div><div class="orb orb2"></div><div class="orb orb3"></div>
+  </div>
+  <div class="container hero-grid hero-grid-single">
     <div class="hero-text">
       <div class="hero-eyebrow">
-        <span class="tag">Aspiring Software Engineer | Java | Backend Developer</span>
+        <span class="status-dot" aria-hidden="true"></span>
+        <span class="status-tag">Open to SWE Roles &amp; Internships</span>
       </div>
       <h1 class="hero-title">
-        Santhiya Krishnamoorthy
+        <span class="hi">Hi, I'm</span>
+        <span class="name">Santhiya<br>Krishnamoorthy</span>
       </h1>
+      <div class="hero-role">
+        <span>Aspiring Software Engineer</span>
+        <span class="role-sep">·</span>
+        <span>Java</span>
+        <span class="role-sep">·</span>
+        <span>DSA</span>
+        <span class="role-sep">·</span>
+        <span>Spring Boot</span>
+      </div>
+      <p class="hero-subtitle" aria-live="polite">
+        <span id="typedText" class="typed"></span><span class="cursor" aria-hidden="true"></span>
+      </p>
       <p class="hero-summary">
-        Passionate aspiring Software Engineer specializing in Java, Spring Boot, and building robust backend systems. <br>
-        Consistent DSA practitioner (250+ LeetCode problems solved), strong in problem solving &amp; system design basics. <br>
-        Ready to build production-grade REST APIs and scalable backend solutions.
+        Final-year CSE student at Anna University building <strong>production-grade backend systems</strong> with REST APIs, JWT authentication, and database-driven architectures. Passionate about clean code, system design, and solving hard problems every single day.
       </p>
-      <ul class="impact-list">
-        <li>• 250+ DSA problems solved on LeetCode</li>
-        <li>• Strong problem solving &amp; system thinking</li>
-        <li>• Backend focus: Spring Boot, REST APIs, MySQL</li>
-        <li>• Passion for clean code and backend design</li>
-      </ul>
+      <div class="impact-pills">
+        <span class="impact-pill"><span class="pip-icon">🧩</span>250+ DSA Problems Solved</span>
+        <span class="impact-pill"><span class="pip-icon">⚙️</span>4+ Real Backend Projects</span>
+        <span class="impact-pill"><span class="pip-icon">🎯</span>Strong Problem Solving</span>
+        <span class="impact-pill"><span class="pip-icon">🏗️</span>System Design Learner</span>
+      </div>
       <div class="hero-ctas">
-        <a class="btn-primary" href="resume.pdf" download>Download Resume</a>
-        <a class="btn-secondary" href="#contact">Contact Me →</a>
+        <a class="btn-primary" href="#projects">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
+          View Projects
+        </a>
+        <a class="btn-outline" href="resume.pdf" download>
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414A1 1 0 0120 9.414V19a2 2 0 01-2 2z"/></svg>
+          Download Resume
+        </a>
+        <a class="btn-outline" href="#contact">Contact Me →</a>
       </div>
-      <div class="hero-social">
-        <a href="mailto:sandkrish3511@gmail.com" target="_blank" title="Email"><i class="icon-email"></i></a>
-        <a href="https://github.com/SanthiyaKrishnamoorthy" target="_blank" title="GitHub"><i class="icon-github"></i></a>
-        <a href="https://www.linkedin.com/in/santhiya-k-6782b1256/" target="_blank" title="LinkedIn"><i class="icon-linkedin"></i></a>
-        <a href="https://leetcode.com/u/santhiya_krishnamoorthy_/" target="_blank" title="LeetCode"><i class="icon-leetcode"></i></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-    <!-- ═══════════════════════════════════════════════════════
-         ABOUT
-    ═════════════════════════════════════════════════════════ -->
-    <section id="about" class="section section-alt">
-      <div class="container">
-        <div class="section-header" data-aos>
-          <div class="section-label">About Me</div>
-          <h2 class="section-title">From curious student to<br>backend builder</h2>
-        </div>
-        <div class="about-grid">
-          <div class="about-story" data-aos>
-            <p>
-              I'm a <strong>final-year Computer Science student</strong> at MIT Campus, Anna University
-              and I don't just study software engineering, I practice it. 
-              I've built real backend systems with authentication, database layers, REST APIs, and even AI integrations.
-            </p>
-            <p>
-              My journey started with competitive programming and DSA, which sharpened my problem-solving instinct. 
-              That foundation led me to build a <strong>Spring Boot + JWT backend</strong> for a coaching management 
-              system, an <strong>AI-powered Python debugging assistant</strong> using RAG and LangChain, 
-              and a <strong>Node.js finance dashboard backend</strong> with SQLite.
-            </p>
-            <div class="about-highlights">
-              <div class="highlight-item">
-                <span class="highlight-icon" aria-hidden="true">🎯</span>
-                <span>Strong DSA foundation — actively solving problems daily</span>
-              </div>
-              <div class="highlight-item">
-                <span class="highlight-icon" aria-hidden="true">⚙️</span>
-                <span>Backend-focused: REST APIs, Auth systems, Databases</span>
-              </div>
-              <div class="highlight-item">
-                <span class="highlight-icon" aria-hidden="true">🤖</span>
-                <span>Exploring AI/ML — built a RAG + LLM project from scratch</span>
-              </div>
-              <div class="highlight-item">
-                <span class="highlight-icon" aria-hidden="true">📦</span>
-                <span>Shipped 4 real projects with public GitHub repos</span>
-              </div>
-            </div>
-          </div>
-          <div class="about-cards" data-aos data-aos-delay="150">
-            <div class="info-card">
-              <div class="info-card-head">
-                <div class="info-card-icon" aria-hidden="true">💻</div>
-                <div class="info-card-title">Languages & Backend</div>
-              </div>
-              <ul class="info-card-list">
-                <li>Java, C, JavaScript, Python, SQL</li>
-                <li>Spring Boot, Node.js / Express</li>
-                <li>JWT Authentication, REST APIs</li>
-                <li>HTML, CSS, PHP (frontend)</li>
-              </ul>
-            </div>
-            <div class="info-card">
-              <div class="info-card-head">
-                <div class="info-card-icon" aria-hidden="true">🛠️</div>
-                <div class="info-card-title">Tools & Databases</div>
-              </div>
-              <ul class="info-card-list">
-                <li>Git &amp; GitHub, Figma</li>
-                <li>MySQL, SQLite, Firebase</li>
-                <li>LangChain, Streamlit</li>
-                <li>Power BI, AWS</li>
-              </ul>
-            </div>
-            <div class="info-card">
-              <div class="info-card-head">
-                <div class="info-card-icon" aria-hidden="true">🌱</div>
-                <div class="info-card-title">Soft Skills</div>
-              </div>
-              <ul class="info-card-list">
-                <li>Adaptability &amp; quick learning</li>
-                <li>Clear communication</li>
-                <li>Time management</li>
-                <li>Tamil (Native) · English (Professional)</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════
-         SKILLS
-    ═════════════════════════════════════════════════════════ -->
-    <section id="skills" class="section">
-      <div class="container">
-        <div class="section-header" data-aos>
-          <div class="section-label">Technical Skills</div>
-          <h2 class="section-title">What I work with</h2>
-          <p class="section-desc">From core programming languages to backend frameworks, databases, and developer tools.</p>
-        </div>
-
-        <div class="skills-categories" data-aos>
-          <button class="cat-btn active" data-cat="all">All</button>
-          <button class="cat-btn" data-cat="lang">Languages</button>
-          <button class="cat-btn" data-cat="backend">Backend</button>
-          <button class="cat-btn" data-cat="db">Databases</button>
-          <button class="cat-btn" data-cat="tools">Tools</button>
-        </div>
-
-        <div class="skills-grid" data-aos>
-          <!-- Languages -->
-          <div class="skill-card" data-cat="lang">
-            <span class="skill-icon" aria-hidden="true">☕</span>
-            <div class="skill-name">Java</div>
-            <div class="skill-bar"><div class="skill-fill" data-level="85" style="width:0"></div></div>
-          </div>
-          <div class="skill-card" data-cat="lang">
-            <span class="skill-icon" aria-hidden="true">🐍</span>
-            <div class="skill-name">Python</div>
-            <div class="skill-bar"><div class="skill-fill" data-level="75" style="width:0"></div></div>
-          </div>
-          <div class="skill-card" data-cat="lang">
-            <span class="skill-icon" aria-hidden="true">🌐</span>
-            <div class="skill-name">JavaScript</div>
-            <div class="skill-bar"><div class="skill-fill" data-level="72" style="width:0"></div></div>
-          </div>
-          <div class="skill-card" data-cat="lang">
-            <span class="skill-icon" aria-hidden="true">🅒</span>
-            <div class="skill-name">C</div>
-            <div class="skill-bar"><div class="skill-fill" data-level="70" style="width:0"></div></div>
-          </div>
-          <div class="skill-card" data-cat="lang">
-            <span class="skill-icon" aria-hidden="true">🗃️</span>
-            <div class="skill-name">SQL</div>
-            <div class="skill-bar"><div class="skill-fill" data-level="80" style="width:0"></div></div>
-          </div>
-
-          <!-- Backend -->
-          <div class="skill-card" data-cat="backend">
-            <span class="skill-icon" aria-hidden="true">🍃</span>
-            <div class="skill-name">Spring Boot</div>
-            <div class="skill-bar"><div class="skill-fill" data-level="75" style="width:0"></div></div>
-          </div>
-          <div class="skill-card" data-cat="backend">
-            <span class="skill-icon" aria-hidden="true">🟩</span>
-            <div class="skill-name">Node.js / Express</div>
-            <div class="skill-bar"><div class="skill-fill" data-level="70" style="width:0"></div></div>
-          </div>
-          <div class="skill-card" data-cat="backend">
-            <span class="skill-icon" aria-hidden="true">🔑</span>
-            <div class="skill-name">JWT Auth</div>
-            <div class="skill-bar"><div class="skill-fill" data-level="78" style="width:0"></div></div>
-          </div>
-          <div class="skill-card" data-cat="backend">
-            <span class="skill-icon" aria-hidden="true">🤖</span>
-            <div class="skill-name">LangChain / RAG</div>
-            <div class="skill-bar"><div class="skill-fill" data-level="65" style="width:0"></div></div>
-          </div>
-          <div class="skill-card" data-cat="backend">
-            <span class="skill-icon" aria-hidden="true">🔗</span>
-            <div class="skill-name">REST APIs</div>
-            <div class="skill-bar"><div class="skill-fill" data-level="80" style="width:0"></div></div>
-          </div>
-
-          <!-- Databases -->
-          <div class="skill-card" data-cat="db">
-            <span class="skill-icon" aria-hidden="true">🐬</span>
-            <div class="skill-name">MySQL</div>
-            <div class="skill-bar"><div class="skill-fill" data-level="80" style="width:0"></div></div>
-          </div>
-          <div class="skill-card" data-cat="db">
-            <span class="skill-icon" aria-hidden="true">🔷</span>
-            <div class="skill-name">SQLite</div>
-            <div class="skill-bar"><div class="skill-fill" data-level="72" style="width:0"></div></div>
-          </div>
-          <div class="skill-card" data-cat="db">
-            <span class="skill-icon" aria-hidden="true">🔥</span>
-            <div class="skill-name">Firebase</div>
-            <div class="skill-bar"><div class="skill-fill" data-level="68" style="width:0"></div></div>
-          </div>
-          <div class="skill-card" data-cat="db">
-            <span class="skill-icon" aria-hidden="true">🔌</span>
-            <div class="skill-name">JDBC</div>
-            <div class="skill-bar"><div class="skill-fill" data-level="75" style="width:0"></div></div>
-          </div>
-
-          <!-- Tools -->
-          <div class="skill-card" data-cat="tools">
-            <span class="skill-icon" aria-hidden="true">🐙</span>
-            <div class="skill-name">Git &amp; GitHub</div>
-            <div class="skill-bar"><div class="skill-fill" data-level="82" style="width:0"></div></div>
-          </div>
-          <div class="skill-card" data-cat="tools">
-            <span class="skill-icon" aria-hidden="true">☁️</span>
-            <div class="skill-name">AWS Basics</div>
-            <div class="skill-bar"><div class="skill-fill" data-level="55" style="width:0"></div></div>
-          </div>
-          <div class="skill-card" data-cat="tools">
-            <span class="skill-icon" aria-hidden="true">📊</span>
-            <div class="skill-name">Power BI</div>
-            <div class="skill-bar"><div class="skill-fill" data-level="60" style="width:0"></div></div>
-          </div>
-          <div class="skill-card" data-cat="tools">
-            <span class="skill-icon" aria-hidden="true">🎨</span>
-            <div class="skill-name">Figma</div>
-            <div class="skill-bar"><div class="skill-fill" data-level="60" style="width:0"></div></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════
-         PROJECTS
-    ═════════════════════════════════════════════════════════ -->
-    <section id="projects" class="section section-alt">
-      <div class="container">
-        <div class="section-header" data-aos>
-          <div class="section-label">Projects</div>
-          <h2 class="section-title">Things I've built</h2>
-          <p class="section-desc">Real-world systems with production patterns — authentication, APIs, AI, and databases.</p>
-        </div>
-
-        <div class="project-filters" data-aos>
-          <button class="filter-btn active" data-filter="all">All Projects</button>
-          <button class="filter-btn" data-filter="java">Java</button>
-          <button class="filter-btn" data-filter="python">Python / AI</button>
-          <button class="filter-btn" data-filter="backend">Backend</button>
-          <button class="filter-btn" data-filter="firebase">Firebase</button>
-        </div>
-
-        <div class="projects-grid">
-
-          <!-- Project 1: AI Python Debugger -->
-          <article class="project-card" data-tags="python ai backend" data-aos>
-            <div class="project-header">
-              <div class="project-icon" aria-hidden="true">🤖</div>
-              <div class="project-links">
-                <a class="icon-btn" href="https://github.com/logarathansv/PyDebugger---LLM-RAG-Integrated-Learning-Platform" target="_blank" rel="noopener" aria-label="View source on GitHub" title="GitHub">
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-                </a>
-              </div>
-            </div>
-            <div class="project-problem">Problem Statement</div>
-            <h3 class="project-title">AI Python Debugging Assistant</h3>
-            <p class="project-desc">
-              Students learning Python struggle to get contextual, course-specific help. Built an AI-powered assistant using Retrieval-Augmented Generation (RAG) + LLMs that understands your course material and helps debug Python code in real time.
-            </p>
-            <div class="project-features">
-              <div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>RAG pipeline with LangChain for context-aware answers</div>
-              <div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>Real-time Python sandbox for interactive debugging</div>
-              <div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>Streamlit UI for seamless student experience</div>
-              <div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>Course-specific document retrieval system</div>
-            </div>
-            <div class="project-tags">
-              <span class="project-tag">Python</span>
-              <span class="project-tag">LangChain</span>
-              <span class="project-tag">RAG</span>
-              <span class="project-tag">LLM</span>
-              <span class="project-tag">Streamlit</span>
-            </div>
-          </article>
-
-          <!-- Project 2: TNPSC -->
-          <article class="project-card" data-tags="java backend" data-aos data-aos-delay="100">
-            <div class="project-header">
-              <div class="project-icon" aria-hidden="true">🏫</div>
-              <div class="project-links">
-                <a class="icon-btn" href="https://github.com/SanthiyaKrishnamoorthy/tnpsc-coaching-centre-management-system" target="_blank" rel="noopener" aria-label="View source on GitHub" title="GitHub">
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-                </a>
-              </div>
-            </div>
-            <div class="project-problem">Problem Statement</div>
-            <h3 class="project-title">TNPSC Coaching Centre Management System</h3>
-            <p class="project-desc">
-              Coaching centres managing TNPSC aspirants relied on paper-based tracking. Built a full backend system with Spring Boot + JWT to manage student enrollments, course progress, exam schedules, and admin operations securely.
-            </p>
-            <div class="project-features">
-              <div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>JWT-based authentication &amp; role-based access control</div>
-              <div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>RESTful APIs for student &amp; course management</div>
-              <div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>MySQL database with JDBC for data persistence</div>
-              <div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>Modular architecture ready for web/mobile frontend</div>
-            </div>
-            <div class="project-tags">
-              <span class="project-tag">Java</span>
-              <span class="project-tag">Spring Boot</span>
-              <span class="project-tag">JWT</span>
-              <span class="project-tag">MySQL</span>
-              <span class="project-tag">JDBC</span>
-            </div>
-          </article>
-
-          <!-- Project 3: Finance Dashboard Backend -->
-          <article class="project-card" data-tags="backend" data-aos data-aos-delay="200">
-            <div class="project-header">
-              <div class="project-icon" aria-hidden="true">💹</div>
-              <div class="project-links">
-                <a class="icon-btn" href="https://github.com/SanthiyaKrishnamoorthy/finance-dashboard-backend" target="_blank" rel="noopener" aria-label="View source on GitHub" title="GitHub">
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-                </a>
-              </div>
-            </div>
-            <div class="project-problem">Problem Statement</div>
-            <h3 class="project-title">Finance Dashboard Backend</h3>
-            <p class="project-desc">
-              Personal finance apps often lack a secure, structured backend. Built a Node.js + Express REST API with JWT authentication and SQLite to power a finance tracking dashboard with user isolation and full CRUD operations.
-            </p>
-            <div class="project-features">
-              <div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>Secure JWT-based user authentication</div>
-              <div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>CRUD operations for transactions &amp; categories</div>
-              <div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>Per-user data isolation with SQLite</div>
-              <div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>Clean RESTful API design with Express middleware</div>
-            </div>
-            <div class="project-tags">
-              <span class="project-tag">Node.js</span>
-              <span class="project-tag">Express</span>
-              <span class="project-tag">JWT</span>
-              <span class="project-tag">SQLite</span>
-              <span class="project-tag">REST API</span>
-            </div>
-          </article>
-
-          <!-- Project 4: Feedback Collector -->
-          <article class="project-card" data-tags="firebase backend" data-aos data-aos-delay="300">
-            <div class="project-header">
-              <div class="project-icon" aria-hidden="true">💬</div>
-              <div class="project-links">
-                <a class="icon-btn" href="https://github.com/SanthiyaKrishnamoorthy/feedback-collector-firebase" target="_blank" rel="noopener" aria-label="View source on GitHub" title="GitHub">
-                  <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-                </a>
-              </div>
-            </div>
-            <div class="project-problem">Problem Statement</div>
-            <h3 class="project-title">Feedback Collector Web App</h3>
-            <p class="project-desc">
-              Collecting and managing event/product feedback in real time is painful with traditional forms. Built a live Firebase-powered web app for collecting, storing, and displaying feedback with real-time Firestore sync.
-            </p>
-            <div class="project-features">
-              <div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>Real-time Firestore data sync — no refresh needed</div>
-              <div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>Firebase Authentication for user sessions</div>
-              <div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>Clean responsive UI with form validation</div>
-              <div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>Admin view for managing all responses</div>
-            </div>
-            <div class="project-tags">
-              <span class="project-tag">JavaScript</span>
-              <span class="project-tag">Firebase</span>
-              <span class="project-tag">Firestore</span>
-              <span class="project-tag">HTML/CSS</span>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <section id="leetcode" class="section">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-label">Problem Solving</div>
-      <h2 class="section-title">LeetCode &amp; DSA Practice</h2>
-      <p>
-        <strong>Consistent DSA practitioner:</strong>
-        <br>
-        <img src="https://leetcard.jacoblin.cool/santhiya_krishnamoorthy_?theme=light&font=baloo&ext=heatmap" alt="LeetCode Badge" style="max-width:320px;">
-      </p>
-      <ul>
-        <li>Problems solved: <strong id="lc-count">250+</strong> (update as you advance!) <a href="https://leetcode.com/u/santhiya_krishnamoorthy_/" target="_blank">LeetCode Profile</a></li>
-        <li>Key topics: Arrays, Linked List, Trees, Graphs, DP</li>
-        <li>Approaching problem-solving with strong fundamentals & system thinking</li>
+      <ul class="hero-meta" aria-label="Contact info">
+        <li class="meta-item">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          Chennai, Tamil Nadu
+        </li>
+        <li class="meta-item">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          sandkrish3511@gmail.com
+        </li>
+        <li class="meta-item">
+          <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          Final Year CSE @ MIT Campus, Anna University
+        </li>
       </ul>
     </div>
   </div>
 </section>
 
-    <!-- ═══════════════════════════════════════════════════════
-         ACHIEVEMENTS
-    ═════════════════════════════════════════════════════════ -->
-    <section id="achievements" class="section">
-      <div class="container">
-        <div class="section-header" data-aos>
-          <div class="section-label">Certifications &amp; Achievements</div>
-          <h2 class="section-title">Learning that counts</h2>
-        </div>
-        <div class="achiev-grid">
-          <div class="achiev-card" data-aos>
-            <div class="achiev-icon" aria-hidden="true">☁️</div>
-            <div>
-              <div class="achiev-title">AWS Cloud Foundations</div>
-              <div class="achiev-issuer">Amazon Web Services</div>
-            </div>
-          </div>
-          <div class="achiev-card" data-aos data-aos-delay="100">
-            <div class="achiev-icon" aria-hidden="true">🤖</div>
-            <div>
-              <div class="achiev-title">Google GenAI Study Jam</div>
-              <div class="achiev-issuer">Google Cloud / GDSC</div>
-            </div>
-          </div>
-          <div class="achiev-card" data-aos data-aos-delay="200">
-            <div class="achiev-icon" aria-hidden="true">📊</div>
-            <div>
-              <div class="achiev-title">Data Structures &amp; Algorithms</div>
-              <div class="achiev-issuer">Amazon / Coursera</div>
-            </div>
-          </div>
-          <div class="achiev-card" data-aos data-aos-delay="300">
-            <div class="achiev-icon" aria-hidden="true">📈</div>
-            <div>
-              <div class="achiev-title">Power BI Certification</div>
-              <div class="achiev-issuer">Microsoft / Coursera</div>
-            </div>
-          </div>
-          <div class="achiev-card" data-aos data-aos-delay="100">
-            <div class="achiev-icon" aria-hidden="true">💼</div>
-            <div>
-              <div class="achiev-title">LinkedIn</div>
-              <div class="achiev-issuer"><a href="https://www.linkedin.com/in/santhiya-k-6782b1256/" target="_blank" rel="noopener" style="color:var(--accent)">View Full Profile →</a></div>
-            </div>
-          </div>
-          <div class="achiev-card" data-aos data-aos-delay="200">
-            <div class="achiev-icon" aria-hidden="true">🐙</div>
-            <div>
-              <div class="achiev-title">GitHub Portfolio</div>
-              <div class="achiev-issuer"><a href="https://github.com/SanthiyaKrishnamoorthy" target="_blank" rel="noopener" style="color:var(--accent)">@SanthiyaKrishnamoorthy →</a></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════
-         EDUCATION
-    ═════════════════════════════════════════════════════════ -->
-    <section id="education" class="section section-alt">
-      <div class="container">
-        <div class="section-header" data-aos>
-          <div class="section-label">Education</div>
-          <h2 class="section-title">Academic background</h2>
-        </div>
-        <div style="max-width: 680px;">
-          <div class="edu-timeline">
-
-            <div class="edu-item" data-aos>
-              <div class="edu-dot" aria-hidden="true"></div>
-              <div class="edu-card">
-                <div class="edu-degree">B.E. Computer Science &amp; Engineering</div>
-                <div class="edu-school">MIT Campus, Anna University — Chennai, Tamil Nadu</div>
-                <div class="edu-meta">
-                  <span class="edu-badge">CGPA: 7.44</span>
-                  <span class="edu-badge">Oct 2022 – 2026</span>
-                </div>
-              </div>
-            </div>
-
-            <div class="edu-item" data-aos data-aos-delay="150">
-              <div class="edu-dot" aria-hidden="true"></div>
-              <div class="edu-card">
-                <div class="edu-degree">Higher Secondary Certificate (HSC)</div>
-                <div class="edu-school">Mount Park Higher Secondary School — Kallakurichi, Tamil Nadu</div>
-                <div class="edu-meta">
-                  <span class="edu-badge">Score: 93.83%</span>
-                  <span class="edu-badge">June 2020 – 2022</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══════════════════════════════════════════════════════
-         CONTACT
-    ═════════════════════════════════════════════════════════ -->
-    <section id="contact" class="section">
-      <div class="container">
-        <div class="section-header" data-aos>
-          <div class="section-label">Contact</div>
-          <h2 class="section-title">Let's connect</h2>
-          <p class="section-desc">Open to internships, full-time SWE roles, and collaboration. I'm actively looking for <strong>SWE internships and full-time roles</strong> at product companies.
-              If you're hiring or want to collaborate on a project, I'd love to hear from you.</p>
-        </div>
-        <div class="contact-methods">
-      <a href="mailto:sandkrish3511@gmail.com"><i class="icon-email"></i> sandkrish3511@gmail.com</a>
-      <a href="https://github.com/SanthiyaKrishnamoorthy" target="_blank"><i class="icon-github"></i> GitHub</a>
-      <a href="https://www.linkedin.com/in/santhiya-k-6782b1256/" target="_blank"><i class="icon-linkedin"></i> LinkedIn</a>
-      <a href="https://leetcode.com/u/santhiya_krishnamoorthy_/" target="_blank"><i class="icon-leetcode"></i> LeetCode</a>
-      </div>
-
-          <div class="contact-form-wrap" data-aos data-aos-delay="150">
-            <form id="contactForm" novalidate>
-              <div class="form-group">
-                <label for="name">Name</label>
-                <input id="name" name="name" type="text" placeholder="Your full name" autocomplete="name" />
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input id="email" name="email" type="email" placeholder="your@email.com" autocomplete="email" />
-              </div>
-              <div class="form-group">
-                <label for="message">Message</label>
-                <textarea id="message" name="message" rows="5" placeholder="Tell me about the opportunity or what you'd like to discuss…"></textarea>
-              </div>
-              <button class="btn-primary" type="submit" style="width:100%;justify-content:center;">
-                <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg>
-                Send Message
-              </button>
-              <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
-            </form>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- ═══════════════════════════════════════════════════════
-       FOOTER
-  ═════════════════════════════════════════════════════════ -->
-  <footer class="footer">
-    <div class="container">
-      <p>
-        © <span id="year"></span> Santhiya K — Built with ♥ in Chennai ·
-        <a href="resume.pdf" download>Download Resume</a> ·
-        <a href="https://github.com/SanthiyaKrishnamoorthy/SanthiyaKrishnamoorthy.github.io" target="_blank" rel="noopener">View Source</a>
-      </p>
+<!-- ABOUT -->
+<section id="about" class="section section-alt">
+  <div class="container">
+    <div class="sh" data-aos>
+      <div class="sh-label">About Me</div>
+      <h2 class="sh-title">Backend developer, problem<br>solver &amp; system thinker</h2>
     </div>
-  </footer>
-  <script src="js/main.js" defer></script>
+    <div class="about-grid">
+      <div class="about-text" data-aos>
+        <p>I'm a <strong>final-year Computer Science student</strong> at MIT Campus, Anna University — and I don't just study software engineering, I practice it daily. I've shipped real backend systems with authentication layers, relational databases, and production-grade REST APIs.</p>
+        <p>My journey started with competitive programming and DSA, which sharpened my problem-solving instinct. That foundation led me to build a <strong>Spring Boot + JWT backend</strong> for a coaching management system, an <strong>AI-powered Python debugging assistant</strong> using RAG &amp; LangChain, and a <strong>Node.js finance dashboard backend</strong> with SQLite.</p>
+        <p>I'm actively targeting <strong>product companies</strong> — grinding DSA, system design, and CS fundamentals every day to get there.</p>
+        <div class="highlights">
+          <div class="hl"><span class="hl-icon">🎯</span>250+ DSA problems — consistent daily practice on LeetCode</div>
+          <div class="hl"><span class="hl-icon">⚙️</span>Backend-first: REST APIs, JWT Auth, DB design, Spring Boot</div>
+          <div class="hl"><span class="hl-icon">🤖</span>Built a RAG + LLM AI assistant from scratch with Python</div>
+          <div class="hl"><span class="hl-icon">📦</span>4 real projects with public GitHub repos &amp; clean code</div>
+          <div class="hl"><span class="hl-icon">📐</span>Actively learning System Design &amp; CS fundamentals</div>
+        </div>
+      </div>
+      <div class="info-cards" data-aos data-aos-delay="150">
+        <div class="ic"><div class="ic-head"><div class="ic-icon">💻</div><div class="ic-title">Languages &amp; Backend</div></div><ul class="ic-list"><li>Java (Primary), Python, JavaScript, C, SQL</li><li>Spring Boot, Node.js / Express</li><li>JWT Auth, REST APIs, OOP &amp; OOAD</li><li>HTML, CSS (frontend basics)</li></ul></div>
+        <div class="ic"><div class="ic-head"><div class="ic-icon">🛠️</div><div class="ic-title">Tools &amp; Databases</div></div><ul class="ic-list"><li>Git &amp; GitHub, IntelliJ IDEA, VS Code</li><li>MySQL, SQLite, Firebase / Firestore</li><li>LangChain, Streamlit, Power BI</li><li>AWS Cloud Foundations, Figma</li></ul></div>
+        <div class="ic"><div class="ic-head"><div class="ic-icon">🧠</div><div class="ic-title">CS Fundamentals</div></div><ul class="ic-list"><li>Data Structures &amp; Algorithms</li><li>DBMS, OS, Computer Networks basics</li><li>OOP, SOLID principles</li><li>System Design (in progress)</li></ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="section">
+  <div class="container">
+    <div class="sh" data-aos><div class="sh-label">Technical Skills</div><h2 class="sh-title">What I work with</h2><p class="sh-desc">Categorized by domain — from core languages to backend frameworks, databases, tools, and CS concepts.</p></div>
+    <div class="skills-blocks">
+      <div class="skill-block" data-aos><div class="sb-head"><div class="sb-icon">🔠</div><div class="sb-title">LANGUAGES</div></div><div class="skills-row"><span class="sk primary">☕ Java</span><span class="sk primary">🗃️ SQL</span><span class="sk">🐍 Python</span><span class="sk">🌐 JavaScript</span><span class="sk">🅒 C</span></div></div>
+      <div class="skill-block" data-aos data-aos-delay="100"><div class="sb-head"><div class="sb-icon">⚙️</div><div class="sb-title">BACKEND</div></div><div class="skills-row"><span class="sk primary">🍃 Spring Boot</span><span class="sk primary">🔗 REST APIs</span><span class="sk primary">🔑 JWT Authentication</span><span class="sk">🟩 Node.js / Express</span><span class="sk">🤖 LangChain / RAG</span></div></div>
+      <div class="skill-block" data-aos data-aos-delay="150"><div class="sb-head"><div class="sb-icon">🧠</div><div class="sb-title">CORE CONCEPTS</div></div><div class="skills-row"><span class="sk green">📊 Data Structures &amp; Algorithms</span><span class="sk green">🏛️ OOP &amp; Design Patterns</span><span class="sk green">🗄️ DBMS &amp; SQL</span><span class="sk">📐 System Design (Learning)</span><span class="sk">🖥️ OS &amp; CN Fundamentals</span></div></div>
+      <div class="skill-block" data-aos data-aos-delay="200"><div class="sb-head"><div class="sb-icon">🐬</div><div class="sb-title">DATABASES</div></div><div class="skills-row"><span class="sk primary">🐬 MySQL</span><span class="sk">🔷 SQLite</span><span class="sk">🔥 Firebase / Firestore</span><span class="sk">🔌 JDBC</span></div></div>
+      <div class="skill-block" data-aos data-aos-delay="250"><div class="sb-head"><div class="sb-icon">🔧</div><div class="sb-title">TOOLS &amp; PLATFORMS</div></div><div class="skills-row"><span class="sk purple">🐙 Git &amp; GitHub</span><span class="sk purple">💡 IntelliJ IDEA</span><span class="sk purple">🆚 VS Code</span><span class="sk">☁️ AWS Basics</span><span class="sk">📊 Power BI</span><span class="sk">🎨 Figma</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS (refreshed structure) -->
+<section id="projects" class="section section-alt">
+  <div class="container">
+    <div class="section-header" data-aos>
+      <div class="section-label">Projects</div>
+      <h2 class="section-title">Things I've built</h2>
+      <p class="section-desc">Real-world systems with production patterns — authentication, APIs, AI, and databases.</p>
+    </div>
+
+    <div class="project-filters" data-aos>
+      <button class="filter-btn active" data-filter="all">All Projects</button>
+      <button class="filter-btn" data-filter="java">Java</button>
+      <button class="filter-btn" data-filter="python">Python / AI</button>
+      <button class="filter-btn" data-filter="backend">Backend</button>
+      <button class="filter-btn" data-filter="firebase">Firebase</button>
+    </div>
+
+    <div class="projects-grid">
+         <article class="project-card" data-tags="java backend" data-aos data-aos-delay="100">
+        <div class="project-header"><div class="project-icon" aria-hidden="true">🏫</div><div class="project-links"><a class="icon-btn" href="https://github.com/SanthiyaKrishnamoorthy/tnpsc-coaching-centre-management-system" target="_blank" rel="noopener" aria-label="View source on GitHub" title="GitHub"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg></a></div></div>
+        <div class="project-problem">Problem Statement</div>
+        <h3 class="project-title">TNPSC Coaching Centre Management System</h3>
+        <p class="project-desc">Coaching centres managing TNPSC aspirants relied on paper-based tracking. Built a full backend system with Spring Boot + JWT to manage student enrollments, course progress, exam schedules, and admin operations securely.</p>
+        <div class="project-features"><div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>JWT-based authentication &amp; role-based access control</div><div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>RESTful APIs for student &amp; course management</div><div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>MySQL database with JDBC for data persistence</div><div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>Modular architecture ready for web/mobile frontend</div></div>
+        <div class="project-tags"><span class="project-tag">Java</span><span class="project-tag">Spring Boot</span><span class="project-tag">JWT</span><span class="project-tag">MySQL</span><span class="project-tag">JDBC</span></div>
+      </article>
+
+      <article class="project-card" data-tags="python ai backend" data-aos>
+        <div class="project-header"><div class="project-icon" aria-hidden="true">🤖</div><div class="project-links"><a class="icon-btn" href="https://github.com/logarathansv/PyDebugger---LLM-RAG-Integrated-Learning-Platform" target="_blank" rel="noopener" aria-label="View source on GitHub" title="GitHub"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg></a></div></div>
+        <div class="project-problem">Problem Statement</div>
+        <h3 class="project-title">AI Python Debugging Assistant</h3>
+        <p class="project-desc">Students learning Python struggle to get contextual, course-specific help. Built an AI-powered assistant using Retrieval-Augmented Generation (RAG) + LLMs that understands your course material and helps debug Python code in real time.</p>
+        <div class="project-features"><div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>RAG pipeline with LangChain for context-aware answers</div><div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>Real-time Python sandbox for interactive debugging</div><div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>Streamlit UI for seamless student experience</div><div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>Course-specific document retrieval system</div></div>
+        <div class="project-tags"><span class="project-tag">Python</span><span class="project-tag">LangChain</span><span class="project-tag">RAG</span><span class="project-tag">LLM</span><span class="project-tag">Streamlit</span></div>
+      </article>
+
+      <article class="project-card" data-tags="backend" data-aos data-aos-delay="200">
+        <div class="project-header"><div class="project-icon" aria-hidden="true">💹</div><div class="project-links"><a class="icon-btn" href="https://github.com/SanthiyaKrishnamoorthy/finance-dashboard-backend" target="_blank" rel="noopener" aria-label="View source on GitHub" title="GitHub"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg></a></div></div>
+        <div class="project-problem">Problem Statement</div>
+        <h3 class="project-title">Finance Dashboard Backend</h3>
+        <p class="project-desc">Personal finance apps often lack a secure, structured backend. Built a Node.js + Express REST API with JWT authentication and SQLite to power a finance tracking dashboard with user isolation and full CRUD operations.</p>
+        <div class="project-features"><div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>Secure JWT-based user authentication</div><div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>CRUD operations for transactions &amp; categories</div><div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>Per-user data isolation with SQLite</div><div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>Clean RESTful API design with Express middleware</div></div>
+        <div class="project-tags"><span class="project-tag">Node.js</span><span class="project-tag">Express</span><span class="project-tag">JWT</span><span class="project-tag">SQLite</span><span class="project-tag">REST API</span></div>
+      </article>
+
+      <article class="project-card" data-tags="firebase backend" data-aos data-aos-delay="300">
+        <div class="project-header"><div class="project-icon" aria-hidden="true">💬</div><div class="project-links"><a class="icon-btn" href="https://github.com/SanthiyaKrishnamoorthy/feedback-collector-firebase" target="_blank" rel="noopener" aria-label="View source on GitHub" title="GitHub"><svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg></a></div></div>
+        <div class="project-problem">Problem Statement</div>
+        <h3 class="project-title">Feedback Collector Web App</h3>
+        <p class="project-desc">Collecting and managing event/product feedback in real time is painful with traditional forms. Built a live Firebase-powered web app for collecting, storing, and displaying feedback with real-time Firestore sync.</p>
+        <div class="project-features"><div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>Real-time Firestore data sync — no refresh needed</div><div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>Firebase Authentication for user sessions</div><div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>Clean responsive UI with form validation</div><div class="feature-item"><span class="feature-dot" aria-hidden="true"></span>Admin view for managing all responses</div></div>
+        <div class="project-tags"><span class="project-tag">JavaScript</span><span class="project-tag">Firebase</span><span class="project-tag">Firestore</span><span class="project-tag">HTML/CSS</span></div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- LEETCODE, LEARNING, GITHUB, ACHIEVEMENTS, EDUCATION, CONTACT remain as before but updated wording (no specific brand names) -->
+<section id="leetcode" class="section"><div class="container"><div class="sh" data-aos><div class="sh-label">Problem Solving</div><h2 class="sh-title">LeetCode &amp; DSA Practice</h2><p class="sh-desc">Consistent daily practice — sharpening algorithmic thinking.</p></div><div class="lc-grid"><div class="lc-info" data-aos><div class="lc-profile-box"><div class="lc-phead"><div class="lc-avatar">🧩</div><div><div class="lc-name">Santhiya Krishnamoorthy</div><div class="lc-handle">@santhiya_krishnamoorthy_</div></div></div><div class="lc-stats"><div class="lc-stat"><div class="lc-stat-num" style="color:var(--accent)">250+</div><div class="lc-stat-lbl">Total</div></div><div class="lc-stat"><div class="lc-stat-num easy">120+</div><div class="lc-stat-lbl">Easy</div></div><div class="lc-stat"><div class="lc-stat-num medium">90+</div><div class="lc-stat-lbl">Medium</div></div></div><div class="lc-topics-title">Key Topics Mastered</div><div class="lc-topics"><span class="topic-tag">Arrays &amp; Strings</span><span class="topic-tag">Linked Lists</span><span class="topic-tag">Trees &amp; BST</span><span class="topic-tag">Graphs &amp; BFS/DFS</span><span class="topic-tag">Dynamic Programming</span><span class="topic-tag">Hashing</span><span class="topic-tag">Stacks &amp; Queues</span><span class="topic-tag">Binary Search</span><span class="topic-tag">Recursion</span><span class="topic-tag">Sliding Window</span></div><a class="lc-link-btn" href="https://leetcode.com/u/santhiya_krishnamoorthy_/" target="_blank" rel="noopener">View LeetCode Profile →</a></div></div><div data-aos data-aos-delay="150"><div class="lc-badge-wrap"><img src="https://leetcard.jacoblin.cool/santhiya_krishnamoorthy_?theme=dark&font=baloo&ext=heatmap" alt="LeetCode stats" loading="lazy" onerror="this.parentElement.innerHTML='<div class=\'lc-badge-loading\'>📊 Stats card loading — visit profile for live data</div>'" /></div></div></div></div></section>
+
+<section id="learning" class="section section-alt"><div class="container"><div class="sh" data-aos><div class="sh-label">Currently Learning</div><h2 class="sh-title">Always leveling up</h2><p class="sh-desc">Focused on the skills that matter most for SWE roles.</p></div><div class="learning-grid"><div class="learn-card" data-aos><div class="lc-card-icon">📊</div><div class="lc-card-title">Advanced DSA</div><div class="lc-card-desc">Diving into hard-level problems: DP optimizations, graph algorithms, segment trees, and complex recursion patterns.</div><div class="lc-progress"><div class="lc-bar" style="width:65%"></div></div></div><div class="learn-card" data-aos data-aos-delay="100"><div class="lc-card-icon">🏗️</div><div class="lc-card-title">System Design Basics</div><div class="lc-card-desc">Learning scalability fundamentals — load balancers, databases at scale, caching, CAP theorem, and microservices architecture.</div><div class="lc-progress"><div class="lc-bar" style="width:40%"></div></div></div><div class="learn-card" data-aos data-aos-delay="200"><div class="lc-card-icon">🍃</div><div class="lc-card-title">Spring Boot Optimization</div><div class="lc-card-desc">Exploring Spring Security, JPA / Hibernate, connection pooling, caching layers, and performance tuning for production backends.</div><div class="lc-progress"><div class="lc-bar" style="width:55%"></div></div></div><div class="learn-card" data-aos data-aos-delay="300"><div class="lc-card-icon">☁️</div><div class="lc-card-title">Cloud &amp; DevOps Basics</div><div class="lc-card-desc">Building on AWS foundations — exploring EC2, S3, RDS, and containerization basics with Docker.</div><div class="lc-progress"><div class="lc-bar" style="width:30%"></div></div></div></div></div></section>
+
+<section id="achievements" class="section section-alt"><div class="container"><div class="sh" data-aos><div class="sh-label">Certifications &amp; Achievements</div><h2 class="sh-title">Learning that counts</h2></div><div class="achiev-grid"><div class="ac" data-aos><div class="ac-icon">☁️</div><div><div class="ac-title">AWS Cloud Foundations</div><div class="ac-issuer">Amazon Web Services</div></div></div><div class="ac" data-aos data-aos-delay="100"><div class="ac-icon">🤖</div><div><div class="ac-title">Google GenAI Study Jam</div><div class="ac-issuer">Google Cloud / GDSC</div></div></div><div class="ac" data-aos data-aos-delay="200"><div class="ac-icon">📊</div><div><div class="ac-title">Data Structures &amp; Algorithms</div><div class="ac-issuer">Coursera</div></div></div><div class="ac" data-aos data-aos-delay="300"><div class="ac-icon">📈</div><div><div class="ac-title">Power BI Certification</div><div class="ac-issuer">Microsoft / Coursera</div></div></div><div class="ac" data-aos><div class="ac-icon">🧩</div><div><div class="ac-title">250+ LeetCode Problems</div><div class="ac-issuer"><a href="https://leetcode.com/u/santhiya_krishnamoorthy_/" target="_blank" rel="noopener" style="color:var(--accent)">View Profile →</a></div></div></div><div class="ac" data-aos data-aos-delay="100"><div class="ac-icon">🐙</div><div><div class="ac-title">GitHub Portfolio</div><div class="ac-issuer"><a href="https://github.com/SanthiyaKrishnamoorthy" target="_blank" rel="noopener" style="color:var(--accent)">@SanthiyaKrishnamoorthy →</a></div></div></div></div></div></section>
+
+<section id="education" class="section"><div class="container"><div class="sh" data-aos><div class="sh-label">Education</div><h2 class="sh-title">Academic background</h2></div><div style="max-width:640px"><div class="edu-timeline"><div class="edu-item" data-aos><div class="edu-dot" aria-hidden="true"></div><div class="edu-card"><div class="edu-degree">B.E. Computer Science &amp; Engineering</div><div class="edu-school">MIT Campus, Anna University — Chennai, Tamil Nadu</div><div class="edu-badges"><span class="edu-badge">CGPA: 7.44</span><span class="edu-badge">Oct 2022 – 2026</span></div></div></div><div class="edu-item" data-aos data-aos-delay="150"><div class="edu-dot" aria-hidden="true"></div><div class="edu-card"><div class="edu-degree">Higher Secondary Certificate (HSC)</div><div class="edu-school">Mount Park Higher Secondary School — Kallakurichi, Tamil Nadu</div><div class="edu-badges"><span class="edu-badge">Score: 93.83%</span><span class="edu-badge">June 2020 – 2022</span></div></div></div></div></div></div></section>
+
+<section id="contact" class="section section-alt"><div class="container"><div class="sh" data-aos><div class="sh-label">Contact</div><h2 class="sh-title">Let's connect</h2><p class="sh-desc">Open to SWE internships, full-time roles, and collaboration. Reach out — I respond fast!</p></div><div class="contact-grid"><div data-aos><p>I'm actively looking for <strong>SWE internships and full-time roles</strong> at product companies. If you're hiring or want to collaborate on a backend project, I'd love to talk.</p><div class="contact-links"><a class="cl" href="mailto:sandkrish3511@gmail.com"><div class="cl-icon">✉️</div><div class="cl-text"><span class="cl-label">Email</span>sandkrish3511@gmail.com</div></a><a class="cl" href="https://www.linkedin.com/in/santhiya-k-6782b1256/" target="_blank"><div class="cl-icon">💼</div><div class="cl-text"><span class="cl-label">LinkedIn</span>santhiya-k-6782b1256</div></a><a class="cl" href="https://github.com/SanthiyaKrishnamoorthy" target="_blank"><div class="cl-icon">🐙</div><div class="cl-text"><span class="cl-label">GitHub</span>@SanthiyaKrishnamoorthy</div></a><a class="cl" href="https://leetcode.com/u/santhiya_krishnamoorthy_/" target="_blank"><div class="cl-icon">🧩</div><div class="cl-text"><span class="cl-label">LeetCode</span>@santhiya_krishnamoorthy_</div></a><a class="cl" href="tel:+919342965358"><div class="cl-icon">📞</div><div class="cl-text"><span class="cl-label">Phone</span>+91 93429 65358</div></a></div><div style="margin-top:1.5rem"><a class="btn-primary" href="resume.pdf" download style="width:100%;justify-content:center"><svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414A1 1 0 0120 9.414V19a2 2 0 01-2 2z"/></svg>Download Resume (PDF)</a></div></div><div class="form-wrap" data-aos data-aos-delay="150"><form id="contactForm" novalidate><div class="fg"><label for="name">Name</label><input id="name" name="name" type="text" placeholder="Your full name" autocomplete="name" /></div><div class="fg"><label for="email">Email</label><input id="email" name="email" type="email" placeholder="your@email.com" autocomplete="email" /></div><div class="fg"><label for="message">Message</label><textarea id="message" name="message" rows="5" placeholder="Tell me about the opportunity or what you'd like to discuss…"></textarea></div><button class="btn-primary" type="submit" style="width:100%;justify-content:center">Send Message</button><p id="formStatus" class="form-status"></p></form></div></div></div></section>
+
+</main>
+
+<footer class="footer"><div class="container"><p>© <span id="year"></span> Santhiya Krishnamoorthy — Backend Developer · Chennai · <a href="resume.pdf" download>Download Resume</a> · <a href="https://github.com/SanthiyaKrishnamoorthy" target="_blank">GitHub</a> · <a href="https://leetcode.com/u/santhiya_krishnamoorthy_/" target="_blank">LeetCode</a></p></div></footer>
+
+<script src="main.js" defer></script>
 </body>
 </html>
