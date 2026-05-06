@@ -32,6 +32,7 @@
         <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">
           <span id="themeIcon">☀️</span>
         </button>
+        <a class="btn-primary" href="resume.pdf" download>Download Resume</a>
         <button class="menu-btn" id="menuBtn" aria-label="Toggle mobile menu">☰</button>
       </div>
     </div>
@@ -53,99 +54,39 @@
          HERO
     ═════════════════════════════════════════════════════════ -->
     <section id="home" class="hero">
-      <div class="hero-bg">
-        <div class="hero-orb hero-orb-1" aria-hidden="true"></div>
-        <div class="hero-orb hero-orb-2" aria-hidden="true"></div>
+  <div class="container hero-grid">
+    <div class="hero-text">
+      <div class="hero-eyebrow">
+        <span class="tag">Aspiring Software Engineer | Java | Backend Developer</span>
       </div>
-
-      <div class="container hero-grid">
-        <!-- Left: Text -->
-        <div class="hero-text">
-          <div class="hero-eyebrow">
-            <span class="hero-dot" aria-hidden="true"></span>
-            <span class="tag">Open to internships &amp; SWE roles</span>
-          </div>
-
-          <h1 class="hero-title">
-            Hi, I'm<br>
-            <span class="name">Santhiya K</span>
-          </h1>
-
-          <p class="hero-subtitle" aria-live="polite">
-            <span id="typedText" class="typed-text"></span><span class="hero-cursor" aria-hidden="true"></span>
-          </p>
-
-          <p class="hero-desc">
-            Final-year CSE student at Anna University building production-grade backend systems,
-            REST APIs, and AI-powered applications.
-          </p>
-
-          <div class="hero-ctas">
-            <a class="btn-primary" href="#projects">
-              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 3H5a2 2 0 00-2 2v4m6-6h10a2 2 0 012 2v4M9 3v18m0 0h10a2 2 0 002-2V9M9 21H5a2 2 0 01-2-2V9m0 0h18"/></svg>
-              View Projects
-            </a>
-            <a class="btn-secondary" href="resume.pdf" download>
-              <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414A1 1 0 0120 9.414V19a2 2 0 01-2 2z"/></svg>
-              Download Resume
-            </a>
-            <a class="btn-secondary" href="#contact">Contact Me →</a>
-          </div>
-
-          <ul class="hero-info" aria-label="Contact info">
-            <li class="hero-info-item">
-              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
-              Chennai, Tamil Nadu
-            </li>
-            <li class="hero-info-item">
-              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-              sandkrish3511@gmail.com
-            </li>
-            <li class="hero-info-item">
-              <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/></svg>
-              +91 93429 65358
-            </li>
-          </ul>
-        </div>
-
-        <!-- Right: Card -->
-        <aside class="hero-card" aria-label="Quick profile">
-          <div class="avatar" aria-hidden="true">SK</div>
-          <div class="hero-card-title">Santhiya K</div>
-          <div class="hero-card-sub mono">Final-year CSE @ MIT Campus, Anna University</div>
-          <div class="hero-stats">
-            <div class="hero-stat">
-              <div class="hero-stat-num">4+</div>
-              <div class="hero-stat-label">Real Projects</div>
-            </div>
-            <div class="hero-stat">
-              <div class="hero-stat-num">7.44</div>
-              <div class="hero-stat-label">CGPA</div>
-            </div>
-            <div class="hero-stat">
-              <div class="hero-stat-num">4+</div>
-              <div class="hero-stat-label">Certifications</div>
-            </div>
-            <div class="hero-stat">
-              <div class="hero-stat-num">93%</div>
-              <div class="hero-stat-label">HSC Score</div>
-            </div>
-          </div>
-          <div class="hero-tech-stack">
-            <div class="hero-tech-label">Core Stack</div>
-            <div class="tech-pills">
-              <span class="tech-pill">Java</span>
-              <span class="tech-pill">Spring Boot</span>
-              <span class="tech-pill">Node.js</span>
-              <span class="tech-pill">MySQL</span>
-              <span class="tech-pill">JWT</span>
-              <span class="tech-pill">Python</span>
-              <span class="tech-pill">Git</span>
-            </div>
-          </div>
-        </aside>
+      <h1 class="hero-title">
+        Santhiya Krishnamoorthy
+      </h1>
+      <p class="hero-summary">
+        Passionate aspiring Software Engineer specializing in Java, Spring Boot, and building robust backend systems. <br>
+        Consistent DSA practitioner (250+ LeetCode problems solved), strong in problem solving &amp; system design basics. <br>
+        Ready to build production-grade REST APIs and scalable backend solutions.
+      </p>
+      <ul class="impact-list">
+        <li>• 250+ DSA problems solved on LeetCode</li>
+        <li>• Strong problem solving &amp; system thinking</li>
+        <li>• Backend focus: Spring Boot, REST APIs, MySQL</li>
+        <li>• Passion for clean code and backend design</li>
+      </ul>
+      <div class="hero-ctas">
+        <a class="btn-primary" href="resume.pdf" download>Download Resume</a>
+        <a class="btn-secondary" href="#contact">Contact Me →</a>
       </div>
-    </section>
+      <div class="hero-social">
+        <a href="mailto:sandkrish3511@gmail.com" target="_blank" title="Email"><i class="icon-email"></i></a>
+        <a href="https://github.com/SanthiyaKrishnamoorthy" target="_blank" title="GitHub"><i class="icon-github"></i></a>
+        <a href="https://www.linkedin.com/in/santhiya-k-6782b1256/" target="_blank" title="LinkedIn"><i class="icon-linkedin"></i></a>
+        <a href="https://leetcode.com/u/santhiya_krishnamoorthy_/" target="_blank" title="LeetCode"><i class="icon-leetcode"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+
     <!-- ═══════════════════════════════════════════════════════
          ABOUT
     ═════════════════════════════════════════════════════════ -->
@@ -158,7 +99,7 @@
         <div class="about-grid">
           <div class="about-story" data-aos>
             <p>
-              I'm a <strong>final-year Computer Science student</strong> at MIT Campus, Anna University — 
+              I'm a <strong>final-year Computer Science student</strong> at MIT Campus, Anna University
               and I don't just study software engineering, I practice it. 
               I've built real backend systems with authentication, database layers, REST APIs, and even AI integrations.
             </p>
@@ -167,10 +108,6 @@
               That foundation led me to build a <strong>Spring Boot + JWT backend</strong> for a coaching management 
               system, an <strong>AI-powered Python debugging assistant</strong> using RAG and LangChain, 
               and a <strong>Node.js finance dashboard backend</strong> with SQLite.
-            </p>
-            <p>
-              I'm actively targeting <strong>product-based companies like Amazon, Google, and Microsoft</strong> — 
-              working on system design, DSA, and CS fundamentals every day to get there.
             </p>
             <div class="about-highlights">
               <div class="highlight-item">
@@ -498,6 +435,25 @@
       </div>
     </section>
 
+    <section id="leetcode" class="section">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">Problem Solving</div>
+      <h2 class="section-title">LeetCode &amp; DSA Practice</h2>
+      <p>
+        <strong>Consistent DSA practitioner:</strong>
+        <br>
+        <img src="https://leetcard.jacoblin.cool/santhiya_krishnamoorthy_?theme=light&font=baloo&ext=heatmap" alt="LeetCode Badge" style="max-width:320px;">
+      </p>
+      <ul>
+        <li>Problems solved: <strong id="lc-count">250+</strong> (update as you advance!) <a href="https://leetcode.com/u/santhiya_krishnamoorthy_/" target="_blank">LeetCode Profile</a></li>
+        <li>Key topics: Arrays, Linked List, Trees, Graphs, DP</li>
+        <li>Approaching problem-solving with strong fundamentals & system thinking</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
     <!-- ═══════════════════════════════════════════════════════
          ACHIEVEMENTS
     ═════════════════════════════════════════════════════════ -->
@@ -603,45 +559,15 @@
         <div class="section-header" data-aos>
           <div class="section-label">Contact</div>
           <h2 class="section-title">Let's connect</h2>
-          <p class="section-desc">Open to internships, full-time SWE roles, and collaboration. Reach out!</p>
+          <p class="section-desc">Open to internships, full-time SWE roles, and collaboration. I'm actively looking for <strong>SWE internships and full-time roles</strong> at product companies.
+              If you're hiring or want to collaborate on a project, I'd love to hear from you.</p>
         </div>
-        <div class="contact-grid">
-          <div class="contact-info" data-aos>
-            <p>
-              I'm actively looking for <strong>SWE internships and full-time roles</strong> at product companies.
-              If you're hiring or want to collaborate on a project, I'd love to hear from you.
-            </p>
-            <div class="contact-links">
-              <a class="contact-link" href="mailto:sandkrish3511@gmail.com">
-                <div class="contact-link-icon" aria-hidden="true">✉️</div>
-                <div class="contact-link-text">
-                  <span class="contact-link-label">Email</span>
-                  sandkrish3511@gmail.com
-                </div>
-              </a>
-              <a class="contact-link" href="https://www.linkedin.com/in/santhiya-k-6782b1256/" target="_blank" rel="noopener">
-                <div class="contact-link-icon" aria-hidden="true">💼</div>
-                <div class="contact-link-text">
-                  <span class="contact-link-label">LinkedIn</span>
-                  santhiya-k-6782b1256
-                </div>
-              </a>
-              <a class="contact-link" href="https://github.com/SanthiyaKrishnamoorthy" target="_blank" rel="noopener">
-                <div class="contact-link-icon" aria-hidden="true">🐙</div>
-                <div class="contact-link-text">
-                  <span class="contact-link-label">GitHub</span>
-                  @SanthiyaKrishnamoorthy
-                </div>
-              </a>
-              <a class="contact-link" href="tel:+919342965358">
-                <div class="contact-link-icon" aria-hidden="true">📞</div>
-                <div class="contact-link-text">
-                  <span class="contact-link-label">Phone</span>
-                  +91 93429 65358
-                </div>
-              </a>
-            </div>
-          </div>
+        <div class="contact-methods">
+      <a href="mailto:sandkrish3511@gmail.com"><i class="icon-email"></i> sandkrish3511@gmail.com</a>
+      <a href="https://github.com/SanthiyaKrishnamoorthy" target="_blank"><i class="icon-github"></i> GitHub</a>
+      <a href="https://www.linkedin.com/in/santhiya-k-6782b1256/" target="_blank"><i class="icon-linkedin"></i> LinkedIn</a>
+      <a href="https://leetcode.com/u/santhiya_krishnamoorthy_/" target="_blank"><i class="icon-leetcode"></i> LeetCode</a>
+      </div>
 
           <div class="contact-form-wrap" data-aos data-aos-delay="150">
             <form id="contactForm" novalidate>
